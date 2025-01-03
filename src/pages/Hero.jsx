@@ -1,5 +1,5 @@
 import React from "react";
-import { headingText } from "../styles";
+import { bodyStyles, mainHeadingStyles } from "../styles";
 import { creator } from "../constants/data";
 import myImage from "../assets/myImage.jpg";
 
@@ -12,12 +12,12 @@ const Hero = () => {
         alt="Profile Image"
       />
 
-      <div className="flex flex-col gap-4 items-center text-onBackground ">
-        <p className={headingText}>
+      <div className="flex flex-col gap-4 items-center">
+        <p className={mainHeadingStyles}>
           Hi there, I'm <span className="text-primary">{creator.name}</span>
         </p>
 
-        <p className="text-center opacity-75">{creator.info}</p>
+        <p className={`${bodyStyles} text-center`}>{creator.info}</p>
       </div>
     </div>
   );

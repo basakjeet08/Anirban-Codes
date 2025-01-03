@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { headingText } from "../styles";
+import { bodyStyles, mainHeadingStyles } from "../styles";
 import { TiThMenu } from "react-icons/ti";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
 // Each Navigation List Item is created by this function
 const NavItem = ({ item, onClick }) => (
   <li
-    className=" p-2 font-mcLaren text-center rounded-lg cursor-pointer hover:bg-primary active:opacity-30 transition-all duration-300"
+    className={`p-2 ${bodyStyles} text-center rounded-lg cursor-pointer hover:bg-primary active:opacity-30 transition-all duration-300`}
     onClick={onClick}
   >
     {item.title}
@@ -34,15 +34,18 @@ const Header = () => {
   return (
     <header className="p-4 flex flex-row g-4 justify-between items-center bg-card shadow-lg shadow-primary">
       {/* Logo or Website Name */}
-      <h1 className={headingText}>Anirban Codes</h1>
+      <h1 className={mainHeadingStyles}>Anirban Codes</h1>
 
       {/* Menu UI for Mobile Devices */}
-      <nav className="md:hidden text-onBackground">
+      <nav className="md:hidden">
         {/* Icon according to the nav menu state */}
         {isMenuOpen ? (
-          <IoIosCloseCircleOutline onClick={toggleMenu} />
+          <IoIosCloseCircleOutline
+            className="text-primary"
+            onClick={toggleMenu}
+          />
         ) : (
-          <TiThMenu onClick={toggleMenu} />
+          <TiThMenu className="text-primary" onClick={toggleMenu} />
         )}
 
         {/* If the menu is open then we show the menu items */}
@@ -57,7 +60,7 @@ const Header = () => {
 
       {/* Normal Navigation for Medium Devices (Tablet, Laptop) */}
       <nav className="hidden md:block">
-        <ul className="flex flex-row text-onBackground gap-4">
+        <ul className="flex flex-row gap-4">
           {menuItems.map((item, index) => (
             <NavItem key={index} item={item} onClick={onNavItemClick} />
           ))}
