@@ -44,14 +44,12 @@ const ExperienceItem = ({
 const Experience = () => {
   return (
     // Experience Container
-    <div className="flex xl:justify-center p-4">
-      <div className="flex flex-col gap-4 w-full xl:w-3/4">
-        <h2 className={`${headingText}`}>Experiences</h2>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {experiences.map((experience, index) => (
-            <ExperienceItem key={index} experience={experience} />
-          ))}
-        </div>
+    <div className="flex flex-col gap-4 w-full">
+      <h2 className={`${headingText}`}>Experiences</h2>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {experiences.map((experience, index) => (
+          <ExperienceItem key={index} experience={experience} />
+        ))}
       </div>
     </div>
   );
