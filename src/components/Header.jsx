@@ -6,7 +6,7 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 // Each Navigation List Item is created by this function
 const NavItem = ({ item, onClick }) => (
   <li
-    className="p-2 text-center rounded-lg cursor-pointer hover:bg-primary active:opacity-30 transition-all duration-300"
+    className=" p-2 font-mcLaren text-center rounded-lg cursor-pointer hover:bg-primary active:opacity-30 transition-all duration-300"
     onClick={onClick}
   >
     {item.title}

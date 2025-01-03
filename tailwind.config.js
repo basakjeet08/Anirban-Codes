@@ -10,6 +10,9 @@ export default {
         onBackground: "#FFFFFF",
         card: "#282B2E",
       },
+      fontFamily: {
+        mcLaren: ["McLaren", "cursive"],
+      },
     },
   },
   plugins: [],
