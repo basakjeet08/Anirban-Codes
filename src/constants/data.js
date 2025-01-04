@@ -1,3 +1,4 @@
+// Technologies Images
 import androidLogo from "../assets/technologies/androidLogo.png";
 import cssLogo from "../assets/technologies/cssLogo.png";
 import firebaseLogo from "../assets/technologies/firebaseLogo.png";
@@ -13,6 +14,13 @@ import reactLogo from "../assets/technologies/reactLogo.png";
 import springLogo from "../assets/technologies/springLogo.png";
 import tailwindLogo from "../assets/technologies/tailwindLogo.png";
 import myImage from "../assets/myImage.jpg";
+
+// Socials Images
+import githubLogo from "../assets/socials/githubLogo.png";
+import gmailLogo from "../assets/socials/gmailLogo.png";
+import instagramLogo from "../assets/socials/instagramLogo.png";
+import linkedInLogo from "../assets/socials/linkedInLogo.png";
+import leetcodeLogo from "../assets/socials/leetcodeLogo.png";
 
 export const creator = {
   name: "Anirban Basak",
@@ -95,22 +103,27 @@ export const socials = [
   {
     type: "LinkedIn",
     url: "https://www.linkedin.com/in/anirban-basak-b96055249/",
+    logo: linkedInLogo,
   },
   {
     type: "GitHub",
     url: "https://github.com/basakjeet08",
-  },
-  {
-    type: "Instagram",
-    url: "https://www.instagram.com/anirban_0_0",
-  },
-  {
-    type: "Email",
-    url: "mailto:jeetbasak2002@gmail.com",
+    logo: githubLogo,
   },
   {
     type: "Leetcode",
     url: "https://leetcode.com/u/anirban_0_0/",
+    logo: leetcodeLogo,
+  },
+  {
+    type: "Instagram",
+    url: "https://www.instagram.com/anirban_0_0",
+    logo: instagramLogo,
+  },
+  {
+    type: "Email",
+    url: "mailto:jeetbasak2002@gmail.com",
+    logo: gmailLogo,
   },
 ];
 

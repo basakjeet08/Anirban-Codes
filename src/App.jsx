@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Experience from "./pages/Experience";
 import Hero from "./pages/Hero";
 import Projects from "./pages/Projects";
+import Socials from "./pages/Socials";
 import Technologies from "./pages/Technologies";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Experience />
           <Technologies />
           <Projects />
+          <Socials />
 
           {/* Bottom Spacing and Padding */}
           <div className="p-1" />
