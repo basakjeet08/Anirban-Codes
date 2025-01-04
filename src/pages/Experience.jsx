@@ -8,6 +8,7 @@ import {
   captionStyles,
   bodyStyles,
 } from "../styles";
+import { technologies } from "../constants/data";
 
 const ExperienceItem = ({
   experience: { company, timeline, jobTitle, location, description },
@@ -54,6 +55,21 @@ const Experience = () => {
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {experiences.map((experience, index) => (
           <ExperienceItem key={index} experience={experience} />
+        ))}
+      </div>
+
+      {/* Technologies Section */}
+      <h1 className={subHeadingStyles}>Technologies</h1>
+      <div className="flex flex-wrap gap-4">
+        {technologies.map((tech, index) => (
+          <div className="h-16 w-16 flex justify-center items-center">
+            <img
+              key={index}
+              className={`p-2 h-14 rounded-xl shadow-lg ${tech.color} hover:h-16 transition-all duration-300`}
+              src={tech.imgSrc}
+              alt={tech.stack + " Logo"}
+            />
+          </div>
         ))}
       </div>
     </div>

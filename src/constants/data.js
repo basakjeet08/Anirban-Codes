@@ -1,3 +1,18 @@
+import androidLogo from "../assets/technologies/androidLogo.png";
+import cssLogo from "../assets/technologies/cssLogo.png";
+import firebaseLogo from "../assets/technologies/firebaseLogo.png";
+import gitLogo from "../assets/technologies/gitLogo.png";
+import graphQlLogo from "../assets/technologies/graphQlLogo.png";
+import htmlLogo from "../assets/technologies/htmlLogo.png";
+import javaLogo from "../assets/technologies/javaLogo.png";
+import javascriptLogo from "../assets/technologies/javascriptLogo.png";
+import kotlinLogo from "../assets/technologies/kotlinLogo.png";
+import mySqlLogo from "../assets/technologies/mySqlLogo.png";
+import postgreLogo from "../assets/technologies/postgreLogo.png";
+import reactLogo from "../assets/technologies/reactLogo.png";
+import springLogo from "../assets/technologies/springLogo.png";
+import tailwindLogo from "../assets/technologies/tailwindLogo.png";
+
 export const creator = {
   name: "Anirban Basak",
   info: `
@@ -27,6 +42,23 @@ export const experiences = [
         At IoT Lab KIIT, I started as an Android Developer and was promoted to Android Developer Lead after a year. I led a team of 10+ members, overseeing technical projects and guiding the development of Android-based IoT solutions.
     `,
   },
+];
+
+export const technologies = [
+  { imgSrc: javaLogo, color: "shadow-red-500", stack: "Java" },
+  { imgSrc: springLogo, color: "shadow-green-500", stack: "Spring Boot" },
+  { imgSrc: kotlinLogo, color: "shadow-blue-500", stack: "Kotlin" },
+  { imgSrc: androidLogo, color: "shadow-green-300", stack: "Android" },
+  { imgSrc: htmlLogo, color: "shadow-orange-500", stack: "HTML" },
+  { imgSrc: cssLogo, color: "shadow-blue-500", stack: "CSS" },
+  { imgSrc: javascriptLogo, color: "shadow-yellow-500", stack: "Javascript" },
+  { imgSrc: reactLogo, color: "shadow-blue-400", stack: "React" },
+  { imgSrc: tailwindLogo, color: "shadow-blue-500", stack: "Tailwind CSS" },
+  { imgSrc: mySqlLogo, color: "shadow-white", stack: "My SQL" },
+  { imgSrc: postgreLogo, color: "shadow-blue-500", stack: "PostGre" },
+  { imgSrc: firebaseLogo, color: "shadow-yellow-500", stack: "Firebase" },
+  { imgSrc: graphQlLogo, color: "shadow-pink-500", stack: "Graph QL" },
+  { imgSrc: gitLogo, color: "shadow-orange-700", stack: "Git" },
 ];
 
 export const projects = [
