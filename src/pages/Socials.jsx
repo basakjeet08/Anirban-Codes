@@ -17,9 +17,9 @@ const SocialItems = ({ social: { type, url, logo, name } }) => {
   );
 };
 
-const Socials = () => {
+const Socials = ({ id = "social" }) => {
   return (
-    <div className="flex flex-col gap-4 w-full">
+    <div id={id} className="flex flex-col gap-4 w-full">
       <h2 className={subHeadingStyles}>Socials</h2>
       <div className="flex flex-row flex-wrap gap-4">
         {socials.map((socialItem, index) => (

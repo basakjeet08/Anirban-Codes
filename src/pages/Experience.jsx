@@ -47,10 +47,10 @@ const ExperienceItem = ({
   );
 };
 
-const Experience = () => {
+const Experience = ({ id = "experience" }) => {
   return (
     // Experience Container
-    <div className="flex flex-col gap-4 w-full">
+    <div id={id} className="flex flex-col gap-4 w-full">
       <h2 className={subHeadingStyles}>Experiences</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {experiences.map((experience, index) => (

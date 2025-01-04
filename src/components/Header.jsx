@@ -4,13 +4,15 @@ import { TiThMenu } from "react-icons/ti";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
 // Each Navigation List Item is created by this function
-const NavItem = ({ item, onClick }) => (
-  <li
-    className={`p-2 ${bodyStyles} text-center rounded-lg cursor-pointer hover:bg-primary active:opacity-30 transition-all duration-300`}
-    onClick={onClick}
-  >
-    {item.title}
-  </li>
+const NavItem = ({ item: { id, title }, onClick }) => (
+  <a href={id}>
+    <li
+      className={`p-2 ${bodyStyles} text-center rounded-lg cursor-pointer hover:bg-primary active:opacity-30 transition-all duration-300`}
+      onClick={onClick}
+    >
+      {title}
+    </li>
+  </a>
 );
 
 const Header = ({ scrollContainerRef }) => {

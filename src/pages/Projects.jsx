@@ -42,10 +42,10 @@ const ProjectItem = ({
   </div>
 );
 
-const Projects = () => {
+const Projects = ({ id = "project" }) => {
   return (
     // Projects Container
-    <div className="flex flex-col gap-4 w-full">
+    <div id={id} className="flex flex-col gap-4 w-full">
       <h2 className={subHeadingStyles}>Projects</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
