@@ -7,6 +7,7 @@ import {
   titleStyles,
   captionStyles,
   bodyStyles,
+  primaryCard,
 } from "../styles";
 
 const ExperienceItem = ({
@@ -18,7 +19,7 @@ const ExperienceItem = ({
 
   return (
     // Card Container
-    <div className="flex flex-col gap-3 p-4 bg-card rounded-lg shadow-sm">
+    <div className={primaryCard}>
       {/* Company and the Location is defined here */}
       <div className="flex gap-2 justify-between items-baseline">
         <p className={titleStyles}>{company}</p>

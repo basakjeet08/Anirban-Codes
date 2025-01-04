@@ -3,6 +3,8 @@ import {
   bodyStyles,
   captionStyles,
   primaryButtonStyles,
+  primaryCard,
+  secondaryCard,
   subHeadingStyles,
   titleStyles,
 } from "../styles";
@@ -12,7 +14,8 @@ import { FaRegShareFromSquare } from "react-icons/fa6";
 const ProjectItem = ({
   project: { title, stack, githubLink, description },
 }) => (
-  <div className="flex flex-col gap-3 p-4 bg-card rounded-lg shadow-sm hover:shadow-md hover:shadow-primary transition-all duration-300">
+  // Card Container
+  <div className={primaryCard}>
     {/* Title and Github Link Container */}
     <div className="flex flex-row gap-4 items-center justify-between">
       <h3 className={titleStyles}>{title}</h3>
@@ -29,7 +32,7 @@ const ProjectItem = ({
     {/*Stack Tags Container*/}
     <div className="flex flex-row flex-wrap gap-2">
       {stack.map((stackItem, index) => (
-        <div key={index} className="p-2 rounded-md bg-cardVariant">
+        <div key={index} className={secondaryCard}>
           <p className={`${captionStyles} opacity-80`}>{stackItem}</p>
         </div>
       ))}

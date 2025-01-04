@@ -7,3 +7,7 @@ export const captionStyles = `text-xs font-thin text-onBackground font-mcLaren o
 
 // Button Styles
 export const primaryButtonStyles = `rounded-lg bg-primary hover:opacity-80 active:opacity-30 transition-all duration-300 text-onBackground`;
+
+// Card Styles
+export const primaryCard = `flex flex-col gap-3 p-4 bg-card rounded-lg shadow-sm hover:shadow-md hover:shadow-primary transition-all duration-300`;
+export const secondaryCard = `p-2 rounded-md bg-cardVariant`;
