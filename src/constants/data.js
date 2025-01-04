@@ -100,66 +100,74 @@ export const technologyData = {
   ],
 };
 
-export const projects = [
-  {
-    title: "JetChart",
-    stack: ["Android", "Jetpack Compose", "Data Visualization"],
-    githubLink: "https://github.com/basakjeet08/JetChart",
-    description: `
+export const projectData = {
+  id: "project",
+  sectionHeading: "Projects",
+  projectList: [
+    {
+      title: "JetChart",
+      stack: ["Android", "Jetpack Compose", "Data Visualization"],
+      githubLink: "https://github.com/basakjeet08/JetChart",
+      description: `
         JetChart is a Compose library featuring over 15 unique chart types. Built with SOLID principles and the strategy design pattern, it ensures code reusability and scalability. It utilizes the Java Canva API and Kotlin DrawScopes for custom drawing.
     `,
-  },
+    },
 
-  {
-    title: "Kritique App",
-    stack: ["Android", "Spring Boot", "Published", "Firebase Auth"],
-    githubLink: "https://github.com/iot-lab-kiit/IoT-Teacher-Review-App",
-    description: `
+    {
+      title: "Kritique App",
+      stack: ["Android", "Spring Boot", "Published", "Firebase Auth"],
+      githubLink: "https://github.com/iot-lab-kiit/IoT-Teacher-Review-App",
+      description: `
         Kritique is a platform for faculty and student reviews, enabling users to rate and provide feedback on faculty members. It features a user-friendly interface, review management, and real-time feedback, helping institutions improve teaching quality and student experiences.
     `,
-  },
-  {
-    title: "Matrix App",
-    stack: ["Android", "Kotlin", "Jetpack Compose"],
-    githubLink: "https://github.com/iot-lab-kiit/Scavenger-Hunt-App",
-    description: `
+    },
+    {
+      title: "Matrix App",
+      stack: ["Android", "Kotlin", "Jetpack Compose"],
+      githubLink: "https://github.com/iot-lab-kiit/Scavenger-Hunt-App",
+      description: `
         Matrix is a game app developed for the KIIT Fest 7.0 treasure hunt. I led an 8-member team across Android and Backend, ensuring timely delivery. I designed networking, a unified design system, and a QR scanner module, boosting efficiency. Thorough testing and debugging minimized bugs, ensuring a smooth experience during the event.
     `,
-  },
-];
+    },
+  ],
+};
 
-export const socials = [
-  {
-    type: "LinkedIn",
-    name: "Anirban Basak",
-    url: "https://www.linkedin.com/in/anirban-basak-b96055249/",
-    logo: linkedInLogo,
-  },
-  {
-    type: "GitHub",
-    name: "Basakjeet08",
-    url: "https://github.com/basakjeet08",
-    logo: githubLogo,
-  },
-  {
-    type: "Leetcode",
-    name: "anirban_0_0",
-    url: "https://leetcode.com/u/anirban_0_0/",
-    logo: leetcodeLogo,
-  },
-  {
-    type: "Instagram",
-    name: "anirban_0_0",
-    url: "https://www.instagram.com/anirban_0_0",
-    logo: instagramLogo,
-  },
-  {
-    type: "Email",
-    name: "jeetbasak2002@gmail.com",
-    url: "mailto:jeetbasak2002@gmail.com",
-    logo: gmailLogo,
-  },
-];
+export const socialData = {
+  id: "social",
+  sectionHeading: "Socials",
+  socialList: [
+    {
+      type: "LinkedIn",
+      name: "Anirban Basak",
+      url: "https://www.linkedin.com/in/anirban-basak-b96055249/",
+      logo: linkedInLogo,
+    },
+    {
+      type: "GitHub",
+      name: "Basakjeet08",
+      url: "https://github.com/basakjeet08",
+      logo: githubLogo,
+    },
+    {
+      type: "Leetcode",
+      name: "anirban_0_0",
+      url: "https://leetcode.com/u/anirban_0_0/",
+      logo: leetcodeLogo,
+    },
+    {
+      type: "Instagram",
+      name: "anirban_0_0",
+      url: "https://www.instagram.com/anirban_0_0",
+      logo: instagramLogo,
+    },
+    {
+      type: "Email",
+      name: "jeetbasak2002@gmail.com",
+      url: "mailto:jeetbasak2002@gmail.com",
+      logo: gmailLogo,
+    },
+  ],
+};
 
 export const contacts = {
   phone: "+91 7478192996",

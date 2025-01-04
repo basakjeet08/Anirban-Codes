@@ -8,7 +8,7 @@ import {
   subHeadingStyles,
   titleStyles,
 } from "../styles";
-import { projects } from "../constants/data";
+import { projectData } from "../constants/data";
 import { FaRegShareFromSquare } from "react-icons/fa6";
 
 const ProjectItem = ({
@@ -42,13 +42,16 @@ const ProjectItem = ({
   </div>
 );
 
-const Projects = ({ id = "project" }) => {
+const Projects = () => {
+  // UI Data for the projects Section
+  const { id, sectionHeading, projectList } = projectData;
+
   return (
     // Projects Container
     <div id={id} className="flex flex-col gap-4 w-full">
-      <h2 className={subHeadingStyles}>Projects</h2>
+      <h2 className={subHeadingStyles}>{sectionHeading}</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, index) => (
+        {projectList.map((project, index) => (
           <ProjectItem key={index} project={project} />
         ))}
       </div>

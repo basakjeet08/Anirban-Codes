@@ -1,6 +1,6 @@
 import React from "react";
 import { bodyStyles, primaryRowCard, subHeadingStyles } from "../styles";
-import { socials } from "../constants/data";
+import { socialData } from "../constants/data";
 
 const SocialItems = ({ social: { type, url, logo, name } }) => {
   return (
@@ -17,12 +17,15 @@ const SocialItems = ({ social: { type, url, logo, name } }) => {
   );
 };
 
-const Socials = ({ id = "social" }) => {
+const Socials = () => {
+  // UI Data for the Socials Section
+  const { id, sectionHeading, socialList } = socialData;
+
   return (
     <div id={id} className="flex flex-col gap-4 w-full">
-      <h2 className={subHeadingStyles}>Socials</h2>
+      <h2 className={subHeadingStyles}>{sectionHeading}</h2>
       <div className="flex flex-row flex-wrap gap-4">
-        {socials.map((socialItem, index) => (
+        {socialList.map((socialItem, index) => (
           <SocialItems key={index} social={socialItem} />
         ))}
       </div>
