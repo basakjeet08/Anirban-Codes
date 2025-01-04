@@ -33,14 +33,18 @@ export const headerData = {
   ],
 };
 
-export const creator = {
+export const heroData = {
+  id: "home",
   name: "Anirban Basak",
   info: `
         I am a versatile developer skilled in Android development and backend systems with Spring Boot. Currently, I'm expanding into front-end web development to become a full-stack developer.
 
         Passionate about creating seamless user experiences and robust applications, I thrive on solving challenges and staying updated with the latest technologies.
     `,
-  profileImage: myImage,
+  profileImage: {
+    src: myImage,
+    alt: `Anirban Basak's Image`,
+  },
 };
 
 export const experiences = [

@@ -1,8 +1,11 @@
 import React from "react";
 import { bodyStyles, mainHeadingStyles } from "../styles";
-import { creator } from "../constants/data";
+import { heroData } from "../constants/data";
 
-const Hero = ({ id = "home" }) => {
+const Hero = () => {
+  // UI Data for the Hero Section
+  const { id, name, info, profileImage } = heroData;
+
   return (
     <div
       id={id}
@@ -10,16 +13,16 @@ const Hero = ({ id = "home" }) => {
     >
       <img
         className="h-36 md:h-48 lg:h-72 w-auto object-cover rounded-lg shadow-2xl shadow-primary"
-        src={creator.profileImage}
-        alt="Profile Image"
+        src={profileImage.src}
+        alt={profileImage.alt}
       />
 
       <div className="flex flex-col gap-4 items-center">
-        <p className={mainHeadingStyles}>
-          Hi there, I'm <span className="text-primary">{creator.name}</span>
+        <p className={`${mainHeadingStyles} text-center`}>
+          Hi there, I'm <span className="text-primary">{name}</span>
         </p>
 
-        <p className={`${bodyStyles} text-center`}>{creator.info}</p>
+        <p className={`${bodyStyles} text-center`}>{info}</p>
       </div>
     </div>
   );
