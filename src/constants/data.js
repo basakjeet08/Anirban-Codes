@@ -22,6 +22,17 @@ import instagramLogo from "../assets/socials/instagramLogo.png";
 import linkedInLogo from "../assets/socials/linkedInLogo.png";
 import leetcodeLogo from "../assets/socials/leetcodeLogo.png";
 
+export const headerData = {
+  websiteName: "Anirban Codes",
+  menuItems: [
+    { id: "#home", title: "Home" },
+    { id: "#experience", title: "Experience" },
+    { id: "#project", title: "Project" },
+    { id: "#social", title: "Social" },
+    // { id: "#contact", title: "Contact" },
+  ],
+};
+
 export const creator = {
   name: "Anirban Basak",
   info: `

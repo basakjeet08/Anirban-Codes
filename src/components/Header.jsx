@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import { bodyStyles, mainHeadingStyles } from "../styles";
 import { TiThMenu } from "react-icons/ti";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import { headerData } from "../constants/data";
 
 // Each Navigation List Item is created by this function
-const NavItem = ({ item: { id, title }, onClick }) => (
+const NavItem = ({ item: { id, title } }) => (
   <a href={id}>
     <li
       className={`p-2 ${bodyStyles} text-center rounded-lg cursor-pointer hover:bg-primary active:opacity-30 transition-all duration-300`}
-      onClick={onClick}
     >
       {title}
     </li>
@@ -16,23 +16,13 @@ const NavItem = ({ item: { id, title }, onClick }) => (
 );
 
 const Header = ({ scrollContainerRef }) => {
-  // Navigation Links or Sections
-  const menuItems = [
-    { id: "#home", title: "Home" },
-    { id: "#experience", title: "Experience" },
-    { id: "#project", title: "Project" },
-    { id: "#social", title: "Social" },
-    { id: "#contact", title: "Contact" },
-  ];
+  // UI Data for the Header Page
+  const { websiteName, menuItems } = headerData;
 
   // Menu State Variables
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
-
-  const onNavItemClick = () => {
-    setIsMenuOpen(false);
-  };
 
   // Use Effect to monitor and collapse menu if the user scrolls or clicks outside
   useEffect(() => {
@@ -62,7 +52,7 @@ const Header = ({ scrollContainerRef }) => {
   return (
     <header className="p-4 flex flex-row g-4 justify-between items-center bg-card shadow-lg shadow-primary">
       {/* Logo or Website Name */}
-      <h1 className={mainHeadingStyles}>Anirban Codes</h1>
+      <h1 className={mainHeadingStyles}>{websiteName}</h1>
 
       {/* Menu UI for Mobile Devices */}
       <nav className="md:hidden" ref={menuRef}>
@@ -78,9 +68,9 @@ const Header = ({ scrollContainerRef }) => {
 
         {/* If the menu is open then we show the menu items */}
         {isMenuOpen && (
-          <ul className="absolute top-16 right-0 w-full p-4 bg-card flex flex-col shadow-lg shadow-primary">
+          <ul className="absolute top-16 right-0 w-full p-4 z-10 bg-card flex flex-col shadow-lg shadow-primary">
             {menuItems.map((item, index) => (
-              <NavItem key={index} item={item} onClick={onNavItemClick} />
+              <NavItem key={index} item={item} />
             ))}
           </ul>
         )}
@@ -90,7 +80,7 @@ const Header = ({ scrollContainerRef }) => {
       <nav className="hidden md:block">
         <ul className="flex flex-row gap-4">
           {menuItems.map((item, index) => (
-            <NavItem key={index} item={item} onClick={onNavItemClick} />
+            <NavItem key={index} item={item} />
           ))}
         </ul>
       </nav>
