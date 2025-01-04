@@ -73,22 +73,32 @@ export const experienceData = {
   ],
 };
 
-export const technologies = [
-  { imgSrc: javaLogo, color: "shadow-red-500", stack: "Java" },
-  { imgSrc: springLogo, color: "shadow-green-500", stack: "Spring Boot" },
-  { imgSrc: kotlinLogo, color: "shadow-blue-500", stack: "Kotlin" },
-  { imgSrc: androidLogo, color: "shadow-green-300", stack: "Android" },
-  { imgSrc: htmlLogo, color: "shadow-orange-500", stack: "HTML" },
-  { imgSrc: cssLogo, color: "shadow-blue-500", stack: "CSS" },
-  { imgSrc: javascriptLogo, color: "shadow-yellow-500", stack: "Javascript" },
-  { imgSrc: reactLogo, color: "shadow-blue-400", stack: "React" },
-  { imgSrc: tailwindLogo, color: "shadow-blue-500", stack: "Tailwind CSS" },
-  { imgSrc: mySqlLogo, color: "shadow-white", stack: "My SQL" },
-  { imgSrc: postgreLogo, color: "shadow-blue-500", stack: "PostGre" },
-  { imgSrc: firebaseLogo, color: "shadow-yellow-500", stack: "Firebase" },
-  { imgSrc: graphQlLogo, color: "shadow-pink-500", stack: "Graph QL" },
-  { imgSrc: gitLogo, color: "shadow-orange-700", stack: "Git" },
-];
+export const technologyData = {
+  sectionHeading: "Technologies",
+  bodyText: `
+      I started with Android development, creating mobile experiences that felt natural. Then, I explored Java and Spring Boot, bringing backend systems to life. Now, I'm diving into web development with React and Tailwind CSS, weaving interactive digital experiences. Each step has shaped me into a creator, ready for the next challenge.      
+  `,
+  techList: [
+    { imgSrc: javaLogo, shadow: "shadow-red-500", stack: "Java" },
+    { imgSrc: springLogo, shadow: "shadow-green-500", stack: "Spring Boot" },
+    { imgSrc: kotlinLogo, shadow: "shadow-blue-500", stack: "Kotlin" },
+    { imgSrc: androidLogo, shadow: "shadow-green-300", stack: "Android" },
+    { imgSrc: htmlLogo, shadow: "shadow-orange-500", stack: "HTML" },
+    { imgSrc: cssLogo, shadow: "shadow-blue-500", stack: "CSS" },
+    {
+      imgSrc: javascriptLogo,
+      shadow: "shadow-yellow-500",
+      stack: "Javascript",
+    },
+    { imgSrc: reactLogo, shadow: "shadow-blue-400", stack: "React" },
+    { imgSrc: tailwindLogo, shadow: "shadow-blue-500", stack: "Tailwind CSS" },
+    { imgSrc: mySqlLogo, shadow: "shadow-white", stack: "My SQL" },
+    { imgSrc: postgreLogo, shadow: "shadow-blue-500", stack: "PostGre" },
+    { imgSrc: firebaseLogo, shadow: "shadow-yellow-500", stack: "Firebase" },
+    { imgSrc: graphQlLogo, shadow: "shadow-pink-500", stack: "Graph QL" },
+    { imgSrc: gitLogo, shadow: "shadow-orange-700", stack: "Git" },
+  ],
+};
 
 export const projects = [
   {
