@@ -12,6 +12,7 @@ import postgreLogo from "../assets/technologies/postgreLogo.png";
 import reactLogo from "../assets/technologies/reactLogo.png";
 import springLogo from "../assets/technologies/springLogo.png";
 import tailwindLogo from "../assets/technologies/tailwindLogo.png";
+import myImage from "../assets/myImage.jpg";
 
 export const creator = {
   name: "Anirban Basak",
@@ -20,6 +21,7 @@ export const creator = {
 
         Passionate about creating seamless user experiences and robust applications, I thrive on solving challenges and staying updated with the latest technologies.
     `,
+  profileImage: myImage,
 };
 
 export const experiences = [
