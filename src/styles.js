@@ -11,3 +11,5 @@ export const primaryButtonStyles = `rounded-lg bg-primary hover:opacity-80 activ
 // Card Styles
 export const primaryCard = `flex flex-col gap-3 p-4 bg-card rounded-lg shadow-sm hover:shadow-md hover:shadow-primary transition-all duration-300`;
 export const secondaryCard = `p-2 rounded-md bg-cardVariant`;
+
+export const primaryRowCard = `flex flex-row items-center gap-3 p-3 bg-card rounded-lg shadow-sm hover:shadow-md hover:shadow-primary transition-all duration-300`;

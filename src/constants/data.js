@@ -102,26 +102,31 @@ export const projects = [
 export const socials = [
   {
     type: "LinkedIn",
+    name: "Anirban Basak",
     url: "https://www.linkedin.com/in/anirban-basak-b96055249/",
     logo: linkedInLogo,
   },
   {
     type: "GitHub",
+    name: "Basakjeet08",
     url: "https://github.com/basakjeet08",
     logo: githubLogo,
   },
   {
     type: "Leetcode",
+    name: "anirban_0_0",
     url: "https://leetcode.com/u/anirban_0_0/",
     logo: leetcodeLogo,
   },
   {
     type: "Instagram",
+    name: "anirban_0_0",
     url: "https://www.instagram.com/anirban_0_0",
     logo: instagramLogo,
   },
   {
     type: "Email",
+    name: "jeetbasak2002@gmail.com",
     url: "mailto:jeetbasak2002@gmail.com",
     logo: gmailLogo,
   },

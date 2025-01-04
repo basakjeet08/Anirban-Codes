@@ -1,16 +1,17 @@
 import React from "react";
-import { primaryCard, subHeadingStyles } from "../styles";
+import { bodyStyles, primaryRowCard, subHeadingStyles } from "../styles";
 import { socials } from "../constants/data";
 
-const SocialItems = ({ social: { type, url, logo } }) => {
+const SocialItems = ({ social: { type, url, logo, name } }) => {
   return (
     <a href={url} target="_blank">
-      <div className={`${primaryCard}`}>
+      <div className={primaryRowCard}>
         <img
           className="h-10 w-10 object-contain"
           src={logo}
           alt={type + " Logo"}
         />
+        <p className={bodyStyles}>{name}</p>
       </div>
     </a>
   );
