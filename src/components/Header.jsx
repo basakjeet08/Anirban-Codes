@@ -50,7 +50,7 @@ const Header = ({ scrollContainerRef }) => {
   }, [isMenuOpen]);
 
   return (
-    <header className="p-4 flex flex-row g-4 justify-between items-center bg-card shadow-lg shadow-primary">
+    <header className="p-4 flex flex-row g-4 z-10 justify-between items-center bg-card shadow-lg shadow-primary">
       {/* Logo or Website Name */}
       <h1 className={mainHeadingStyles}>{websiteName}</h1>
 

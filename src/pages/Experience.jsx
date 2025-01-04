@@ -23,7 +23,18 @@ const ExperienceItem = ({
       {/* Company and the Location is defined here */}
       <div className="flex gap-2 justify-between items-baseline">
         <p className={titleStyles}>{company}</p>
-        <p className={captionStyles}>{location}</p>
+
+        <div className="flex gap-2 items-center">
+          <p className={captionStyles}>{location}</p>
+          {isExpanded ? (
+            <AiFillUpCircle onClick={toggle} className="h-5 w-5 text-primary" />
+          ) : (
+            <AiFillDownCircle
+              onClick={toggle}
+              className="h-5 w-5 text-primary"
+            />
+          )}
+        </div>
       </div>
 
       {/* Position and the Timeline is shown here */}
@@ -34,15 +45,6 @@ const ExperienceItem = ({
 
       {/* Description is shown here if the user expands the card */}
       {isExpanded && <p className={bodyStyles}>{description}</p>}
-
-      {isExpanded ? (
-        <AiFillUpCircle onClick={toggle} className="h-5 w-full text-primary" />
-      ) : (
-        <AiFillDownCircle
-          onClick={toggle}
-          className="h-5 w-full text-primary"
-        />
-      )}
     </div>
   );
 };
