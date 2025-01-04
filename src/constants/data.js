@@ -47,27 +47,31 @@ export const heroData = {
   },
 };
 
-export const experiences = [
-  {
-    company: "MBITS Innovation Private Limited",
-    timeline: "June 2023 - Dec 2023",
-    jobTitle: "Android Developer Intern",
-    location: "Remote",
-    description: `
+export const experienceData = {
+  id: "experience",
+  sectionHeading: "Experiences",
+  expList: [
+    {
+      company: "MBITS Innovation Private Limited",
+      timeline: "June 2023 - Dec 2023",
+      jobTitle: "Android Developer Intern",
+      location: "Remote",
+      description: `
         As an Android intern at MBITS, I contributed to the development of Android apps, focusing on feature implementation and optimization. I gained hands-on experience with Kotlin, Java, and Android best practices, strengthening my mobile development skills.
     `,
-  },
+    },
 
-  {
-    company: "IoT Lab, KIIT",
-    timeline: "Sep 2022 - Aug 2024",
-    jobTitle: "Android Lead",
-    location: "DL - 007, KIIT",
-    description: `
+    {
+      company: "IoT Lab, KIIT",
+      timeline: "Sep 2022 - Aug 2024",
+      jobTitle: "Android Lead",
+      location: "DL - 007, KIIT",
+      description: `
         At IoT Lab KIIT, I started as an Android Developer and was promoted to Android Developer Lead after a year. I led a team of 10+ members, overseeing technical projects and guiding the development of Android-based IoT solutions.
     `,
-  },
-];
+    },
+  ],
+};
 
 export const technologies = [
   { imgSrc: javaLogo, color: "shadow-red-500", stack: "Java" },
