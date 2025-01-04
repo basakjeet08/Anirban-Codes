@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Experience from "./pages/Experience";
 import Hero from "./pages/Hero";
+import Projects from "./pages/Projects";
 import Technologies from "./pages/Technologies";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
           <Hero />
           <Experience />
           <Technologies />
+          <Projects />
         </div>
       </div>
     </div>

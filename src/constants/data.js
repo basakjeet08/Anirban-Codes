@@ -71,7 +71,6 @@ export const projects = [
     description: `
         JetChart is a Compose library featuring over 15 unique chart types. Built with SOLID principles and the strategy design pattern, it ensures code reusability and scalability. It utilizes the Java Canva API and Kotlin DrawScopes for custom drawing.
     `,
-    documentationLink: "https://dev-anirban.gitbook.io/jetchart",
   },
 
   {

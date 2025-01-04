@@ -9,6 +9,7 @@ export default {
         background: "#1C1F22",
         onBackground: "#FFFFFF",
         card: "#282B2E",
+        cardVariant: "#494848",
       },
       fontFamily: {
         mcLaren: ["McLaren", "cursive"],
