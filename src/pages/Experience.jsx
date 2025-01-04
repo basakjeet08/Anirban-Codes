@@ -57,7 +57,9 @@ const Experience = () => {
       <h2 className={subHeadingStyles}>{sectionHeading}</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {expList.map((experience, index) => (
-          <ExperienceItem key={index} experience={experience} />
+          <div key={index}>
+            <ExperienceItem experience={experience} />
+          </div>
         ))}
       </div>
     </div>

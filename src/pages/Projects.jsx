@@ -52,7 +52,9 @@ const Projects = () => {
       <h2 className={subHeadingStyles}>{sectionHeading}</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {projectList.map((project, index) => (
-          <ProjectItem key={index} project={project} />
+          <div key={index}>
+            <ProjectItem project={project} />
+          </div>
         ))}
       </div>
     </div>

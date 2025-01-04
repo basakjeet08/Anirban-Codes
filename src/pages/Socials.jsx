@@ -26,7 +26,9 @@ const Socials = () => {
       <h2 className={subHeadingStyles}>{sectionHeading}</h2>
       <div className="flex flex-row flex-wrap gap-4">
         {socialList.map((socialItem, index) => (
-          <SocialItems key={index} social={socialItem} />
+          <div key={index}>
+            <SocialItems social={socialItem} />
+          </div>
         ))}
       </div>
     </div>
