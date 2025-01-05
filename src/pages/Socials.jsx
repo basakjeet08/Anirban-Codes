@@ -19,11 +19,12 @@ const SocialItems = ({ social: { type, url, logo, name } }) => {
 
 const Socials = () => {
   // UI Data for the Socials Section
-  const { id, sectionHeading, socialList } = socialData;
+  const { id, sectionHeading, content, socialList } = socialData;
 
   return (
     <div id={id} className="flex flex-col gap-4 w-full">
       <h2 className={subHeadingStyles}>{sectionHeading}</h2>
+      <p className={bodyStyles}>{content}</p>
       <div className="flex flex-row flex-wrap gap-4">
         {socialList.map((socialItem, index) => (
           <div key={index}>

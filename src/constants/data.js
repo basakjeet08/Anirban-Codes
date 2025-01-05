@@ -15,6 +15,9 @@ import springLogo from "../assets/technologies/springLogo.png";
 import tailwindLogo from "../assets/technologies/tailwindLogo.png";
 import myImage from "../assets/myImage.jpg";
 
+// Projects Images
+import jetchartCover from "../assets/projects/jetchartCover.jpg";
+
 // Socials Images
 import githubLogo from "../assets/socials/githubLogo.png";
 import gmailLogo from "../assets/socials/gmailLogo.png";
@@ -37,9 +40,9 @@ export const heroData = {
   id: "home",
   name: "Anirban Basak",
   info: `
-        I am a versatile developer skilled in Android development and backend systems with Spring Boot. Currently, I'm expanding into front-end web development to become a full-stack developer.
-
-        Passionate about creating seamless user experiences and robust applications, I thrive on solving challenges and staying updated with the latest technologies.
+        I am a passionate software developer with a strong foundation in Android development and backend systems using Spring Boot. 
+        My journey has been driven by curiosity and a desire to create impactful digital experiences. 
+        Currently, I am diving into front-end web development, leveraging tools like React and Tailwind CSS, to become a dynamic full-stack developer capable of building end-to-end solutions.
     `,
   profileImage: {
     src: myImage,
@@ -54,10 +57,10 @@ export const experienceData = {
     {
       company: "MBITS Innovation Private Limited",
       timeline: "June 2023 - Dec 2023",
-      jobTitle: "Android Developer Intern",
+      jobTitle: "Trainee Android Intern",
       location: "Remote",
       description: `
-        As an Android intern at MBITS, I contributed to the development of Android apps, focusing on feature implementation and optimization. I gained hands-on experience with Kotlin, Java, and Android best practices, strengthening my mobile development skills.
+        As an Android intern at MBITS, I Contributed to Android App development, implementing new features, optimizing performance, and adhering to Android best practices using Kotlin and Jetpack Compose.
     `,
     },
 
@@ -67,7 +70,9 @@ export const experienceData = {
       jobTitle: "Android Lead",
       location: "DL - 007, KIIT",
       description: `
-        At IoT Lab KIIT, I started as an Android Developer and was promoted to Android Developer Lead after a year. I led a team of 10+ members, overseeing technical projects and guiding the development of Android-based IoT solutions.
+        At IoT Lab, I began as an Android Developer, where I developed innovative solutions integrating IoT technologies with Android apps. 
+        Within a year, I was promoted to Android Developer Lead, overseeing a team of 10+ developers. 
+        Together, we delivered several successful projects that bridged the gap between hardware and software, enhancing IoT functionality and user engagement.
     `,
     },
   ],
@@ -76,7 +81,9 @@ export const experienceData = {
 export const technologyData = {
   sectionHeading: "Technologies",
   bodyText: `
-      I started with Android development, creating mobile experiences that felt natural. Then, I explored Java and Spring Boot, bringing backend systems to life. Now, I'm diving into web development with React and Tailwind CSS, weaving interactive digital experiences. Each step has shaped me into a creator, ready for the next challenge.      
+      My technical journey began with Android development, where I created seamless and intuitive mobile experiences. 
+      Over time, I delved into backend systems using Java and Spring Boot, building scalable and secure APIs. 
+      To expand my expertise, I have embraced front-end web development, exploring tools like React and Tailwind CSS to craft visually appealing and interactive user interfaces. This multifaceted approach enables me to deliver holistic and efficient software solutions.
   `,
   techList: [
     { imgSrc: javaLogo, shadow: "shadow-red-500", stack: "Java" },
@@ -88,14 +95,14 @@ export const technologyData = {
     {
       imgSrc: javascriptLogo,
       shadow: "shadow-yellow-500",
-      stack: "Javascript",
+      stack: "JavaScript",
     },
     { imgSrc: reactLogo, shadow: "shadow-blue-400", stack: "React" },
     { imgSrc: tailwindLogo, shadow: "shadow-blue-500", stack: "Tailwind CSS" },
-    { imgSrc: mySqlLogo, shadow: "shadow-white", stack: "My SQL" },
-    { imgSrc: postgreLogo, shadow: "shadow-blue-500", stack: "PostGre" },
+    { imgSrc: mySqlLogo, shadow: "shadow-white", stack: "MySQL" },
+    { imgSrc: postgreLogo, shadow: "shadow-blue-500", stack: "PostgreSQL" },
     { imgSrc: firebaseLogo, shadow: "shadow-yellow-500", stack: "Firebase" },
-    { imgSrc: graphQlLogo, shadow: "shadow-pink-500", stack: "Graph QL" },
+    { imgSrc: graphQlLogo, shadow: "shadow-pink-500", stack: "GraphQL" },
     { imgSrc: gitLogo, shadow: "shadow-orange-700", stack: "Git" },
   ],
 };
@@ -105,11 +112,12 @@ export const projectData = {
   sectionHeading: "Projects",
   projectList: [
     {
+      image: jetchartCover,
       title: "JetChart",
       stack: ["Android", "Jetpack Compose", "Data Visualization"],
       githubLink: "https://github.com/basakjeet08/JetChart",
       description: `
-        JetChart is a Compose library featuring over 15 unique chart types. Built with SOLID principles and the strategy design pattern, it ensures code reusability and scalability. It utilizes the Java Canva API and Kotlin DrawScopes for custom drawing.
+        JetChart is a Jetpack Compose chart library built using SOLID principles and the strategy design pattern. It emphasizes code reusability and scalability, ensuring ease of integration into various projects. The library leverages the Java Canvas API and Kotlin DrawScopes for high-performance custom rendering, making it a robust solution for data visualization needs.
     `,
     },
 
@@ -118,7 +126,7 @@ export const projectData = {
       stack: ["Android", "Spring Boot", "Published", "Firebase Auth"],
       githubLink: "https://github.com/iot-lab-kiit/IoT-Teacher-Review-App",
       description: `
-        Kritique is a platform for faculty and student reviews, enabling users to rate and provide feedback on faculty members. It features a user-friendly interface, review management, and real-time feedback, helping institutions improve teaching quality and student experiences.
+        Kritique App empowers students to provide feedback and ratings for faculty members, fostering a culture of continuous improvement. Its intuitive interfaces, robust data handling, and detailed analytics ensure transparency and reliability.
     `,
     },
     {
@@ -126,7 +134,9 @@ export const projectData = {
       stack: ["Android", "Kotlin", "Jetpack Compose"],
       githubLink: "https://github.com/iot-lab-kiit/Scavenger-Hunt-App",
       description: `
-        Matrix is a game app developed for the KIIT Fest 7.0 treasure hunt. I led an 8-member team across Android and Backend, ensuring timely delivery. I designed networking, a unified design system, and a QR scanner module, boosting efficiency. Thorough testing and debugging minimized bugs, ensuring a smooth experience during the event.
+        Matrix App is a comprehensive platform designed to streamline user interactions and task management. 
+        My contributions included developing robust networking logic, creating a unified design system for a consistent user experience, and implementing a highly efficient QR scanner module. 
+        These features collectively improved app efficiency and usability, catering to diverse user needs.
     `,
     },
   ],
@@ -135,6 +145,9 @@ export const projectData = {
 export const socialData = {
   id: "social",
   sectionHeading: "Socials",
+  content: `
+      Connecting with people is at the heart of growth and collaboration. From showcasing my projects on GitHub to networking on LinkedIn and sharing creative moments on Instagram, these platforms represent my journey. Let’s connect and create something impactful together.
+  `,
   socialList: [
     {
       type: "LinkedIn",
@@ -170,6 +183,10 @@ export const socialData = {
 };
 
 export const contacts = {
+  content: `
+      Feel free to reach out for project collaborations, freelance opportunities, or professional queries. 
+      I'm always excited to connect with like-minded individuals!
+  `,
   phone: "+91 7478192996",
   email: "jeetbasak2002@gmail.com",
 };

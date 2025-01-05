@@ -12,10 +12,19 @@ import { projectData } from "../constants/data";
 import { FaRegShareFromSquare } from "react-icons/fa6";
 
 const ProjectItem = ({
-  project: { title, stack, githubLink, description },
+  project: { image, title, stack, githubLink, description },
 }) => (
   // Card Container
   <div className={primaryCard}>
+    {/* Project Image */}
+    {image && (
+      <img
+        className="w-full rounded-lg object-contain"
+        src={image}
+        alt="Project Image"
+      />
+    )}
+
     {/* Title and Github Link Container */}
     <div className="flex flex-row gap-4 items-center justify-between">
       <h3 className={titleStyles}>{title}</h3>
