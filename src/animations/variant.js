@@ -22,3 +22,23 @@ export const horizontalSlide = (direction, delay = 0.2) => {
     },
   };
 };
+
+export const scaleIn = () => {
+  return {
+    // Acts as initial state
+    initial: {
+      opacity: 0,
+      scale: 0,
+    },
+
+    // Acts as final state
+    final: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.75,
+        easings: easeInOut,
+      },
+    },
+  };
+};
