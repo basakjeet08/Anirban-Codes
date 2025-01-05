@@ -1,6 +1,11 @@
 import React from "react";
 import { bodyStyles, primaryRowCard, subHeadingStyles } from "../styles";
 import { socialData } from "../constants/data";
+import { motion } from "framer-motion";
+import {
+  horizontalSlide,
+  verticalStaggeredAnimation,
+} from "../animations/variant";
 
 const SocialItems = ({ social: { type, url, logo, name } }) => {
   return (
@@ -24,12 +29,27 @@ const Socials = () => {
   return (
     <div id={id} className="flex flex-col gap-4 w-full pt-6">
       <h2 className={subHeadingStyles}>{sectionHeading}</h2>
-      <p className={bodyStyles}>{content}</p>
+      <motion.div
+        className="overflow-hidden"
+        variants={horizontalSlide("right")}
+        initial="initial"
+        whileInView="final"
+        viewport={{ once: true }}
+      >
+        <p className={bodyStyles}>{content}</p>
+      </motion.div>
+
       <div className="flex flex-row flex-wrap gap-4">
         {socialList.map((socialItem, index) => (
-          <div key={index}>
+          <motion.div
+            key={index}
+            variants={verticalStaggeredAnimation(index)}
+            initial="initial"
+            whileInView="final"
+            viewport={{ once: true }}
+          >
             <SocialItems social={socialItem} />
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
