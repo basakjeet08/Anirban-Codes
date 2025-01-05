@@ -10,6 +10,8 @@ import {
 } from "../styles";
 import { IoIosArrowDropup } from "react-icons/io";
 import { IoIosArrowDropdown } from "react-icons/io";
+import { easeInOut, motion } from "framer-motion";
+import { horizontalSlide } from "../animations/variant";
 
 const ExperienceItem = ({
   experience: { company, timeline, jobTitle, location, description },
@@ -45,7 +47,14 @@ const ExperienceItem = ({
       </div>
 
       {/* Description is shown here if the user expands the card */}
-      {isExpanded && <p className={bodyStyles}>{description}</p>}
+      <motion.div
+        className="overflow-hidden"
+        initial={{ height: 0 }}
+        animate={isExpanded ? { height: "auto" } : { height: 0 }}
+        transition={{ duration: 0.3, easings: easeInOut }}
+      >
+        <p className={bodyStyles}>{description}</p>
+      </motion.div>
     </div>
   );
 };
@@ -58,13 +67,19 @@ const Experience = () => {
     // Experience Container
     <div id={id} className="flex flex-col gap-4 w-full pt-6">
       <h2 className={subHeadingStyles}>{sectionHeading}</h2>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <motion.div
+        className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+        variants={horizontalSlide("right")}
+        initial="initial"
+        whileInView="final"
+        viewport={{ once: true }}
+      >
         {expList.map((experience, index) => (
           <div key={index}>
             <ExperienceItem experience={experience} />
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
