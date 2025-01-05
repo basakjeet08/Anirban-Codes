@@ -17,6 +17,7 @@ import myImage from "../assets/myImage.jpg";
 
 // Projects Images
 import jetchartCover from "../assets/projects/jetchartCover.jpg";
+import reactiveTodoImage from "../assets/projects/reactiveTodoImage.png";
 
 // Socials Images
 import githubLogo from "../assets/socials/githubLogo.png";
@@ -130,6 +131,36 @@ export const projectData = {
         Kritique App allows students to provide feedback and ratings for faculty members, fostering a culture of continuous improvement. Its intuitive interfaces, robust data handling, and detailed analytics ensure transparency and reliability.
     `,
     },
+
+    {
+      image: reactiveTodoImage,
+      title: "Reactive Todos",
+      stack: [
+        "JavaScript",
+        "React",
+        "Spring Boot",
+        "PostGre SQL",
+        "Fullstack",
+        "Deployed",
+      ],
+      githubLink: "https://github.com/basakjeet08/React-Todo-Website",
+      description: `
+        Reactive Todo is a thoughtfully designed application that helps users efficiently manage their day-to-day tasks. 
+        Built with simplicity and usability in mind, it features a clean and intuitive UI that supports essential to-do app functionalities, making task management seamless and hassle-free.
+    `,
+    },
+
+    {
+      title: "StockBot",
+      stack: ["Java", "Spring Boot", "PostGre SQL", "Backend"],
+      githubLink: "https://github.com/basakjeet08/Stock-Bot",
+      description: `
+        Stock Bot is an Inventory Management System designed to streamline the management of store stocks and supplies. 
+        It enables users to efficiently track inventory levels, monitor stock availability, and manage supplies in real-time. 
+        With its robust functionality, this backend server provides APIs to simplify inventory control, reduce manual errors, and ensure smooth store operations.
+    `,
+    },
+
     {
       title: "Matrix App",
       stack: ["Android", "Kotlin", "Jetpack Compose"],
