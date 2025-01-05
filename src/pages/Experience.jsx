@@ -11,7 +11,7 @@ import {
 import { IoIosArrowDropup } from "react-icons/io";
 import { IoIosArrowDropdown } from "react-icons/io";
 import { easeInOut, motion } from "framer-motion";
-import { horizontalSlide } from "../animations/variant";
+import { verticalStaggeredAnimation } from "../animations/variant";
 
 const ExperienceItem = ({
   experience: { company, timeline, jobTitle, location, description },
@@ -67,19 +67,19 @@ const Experience = () => {
     // Experience Container
     <div id={id} className="flex flex-col gap-4 w-full pt-6">
       <h2 className={subHeadingStyles}>{sectionHeading}</h2>
-      <motion.div
-        className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
-        variants={horizontalSlide("right")}
-        initial="initial"
-        whileInView="final"
-        viewport={{ once: true }}
-      >
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {expList.map((experience, index) => (
-          <div key={index}>
+          <motion.div
+            key={index}
+            variants={verticalStaggeredAnimation(index)}
+            initial="initial"
+            whileInView="final"
+            viewport={{ once: true }}
+          >
             <ExperienceItem experience={experience} />
-          </div>
+          </motion.div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 };
