@@ -86,7 +86,7 @@ const Contact = () => {
   const { id, sectionHeading, content, accessKey } = contactData;
   return (
     // Container for Contact Me Section
-    <div id={id} className="flex flex-col gap-4 w-full pt-6">
+    <div id={id} className="flex flex-col gap-8 w-full pt-6">
       <h2 className={subHeadingStyles}>{sectionHeading}</h2>
 
       <motion.div

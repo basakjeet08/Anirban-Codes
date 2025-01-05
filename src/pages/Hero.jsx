@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <div
       id={id}
-      className="w-full pt-32 flex flex-col gap-y-4 gap-x-24 justify-center items-center lg:flex-row-reverse"
+      className="w-full pt-32 flex flex-col gap-y-8 gap-x-24 justify-center items-center lg:flex-row-reverse"
     >
       <motion.img
         className="w-1/3 max-w-80 max-h-80 object-cover rounded-full shadow-2xl shadow-primary outline-dashed outline-primary outline-offset-4 lg:outline-offset-8"
