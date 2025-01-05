@@ -5,6 +5,7 @@ import Hero from "./pages/Hero";
 import Projects from "./pages/Projects";
 import Socials from "./pages/Socials";
 import Technologies from "./pages/Technologies";
+import Contact from "./pages/Contact";
 
 function App() {
   const scrollContainerRef = useRef(null);
@@ -22,6 +23,7 @@ function App() {
           <Technologies />
           <Projects />
           <Socials />
+          <Contact />
 
           {/* Bottom Spacing and Padding */}
           <div className="p-1" />

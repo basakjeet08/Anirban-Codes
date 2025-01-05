@@ -32,7 +32,7 @@ export const headerData = {
     { id: "#experience", title: "Experience" },
     { id: "#project", title: "Project" },
     { id: "#social", title: "Social" },
-    // { id: "#contact", title: "Contact" },
+    { id: "#contact", title: "Contact Me" },
   ],
 };
 
@@ -182,10 +182,11 @@ export const socialData = {
 };
 
 export const contacts = {
+  id: "contact",
+  sectionHeading: "Contact Me",
   content: `
       Feel free to reach out for project collaborations, freelance opportunities, or professional queries. 
       I'm always excited to connect with like-minded individuals!
   `,
-  phone: "+91 7478192996",
   email: "jeetbasak2002@gmail.com",
 };
