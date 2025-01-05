@@ -22,7 +22,7 @@ const Socials = () => {
   const { id, sectionHeading, content, socialList } = socialData;
 
   return (
-    <div id={id} className="flex flex-col gap-4 w-full">
+    <div id={id} className="flex flex-col gap-4 w-full pt-6">
       <h2 className={subHeadingStyles}>{sectionHeading}</h2>
       <p className={bodyStyles}>{content}</p>
       <div className="flex flex-row flex-wrap gap-4">

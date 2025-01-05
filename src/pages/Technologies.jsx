@@ -7,7 +7,7 @@ const Technologies = () => {
   const { sectionHeading, bodyText, techList } = technologyData;
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 pt-6">
       <h1 className={subHeadingStyles}>{sectionHeading}</h1>
       <p className={bodyStyles}>{bodyText}</p>
       <div className="flex flex-wrap gap-4">
