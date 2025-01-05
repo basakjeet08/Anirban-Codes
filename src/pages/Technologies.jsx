@@ -1,6 +1,8 @@
 import React from "react";
 import { technologyData } from "../constants/data";
 import { bodyStyles, subHeadingStyles } from "../styles";
+import { motion } from "framer-motion";
+import { scaleIn } from "../animations/variant";
 
 const Technologies = () => {
   // UI Data for Technologies
@@ -12,16 +14,20 @@ const Technologies = () => {
       <p className={bodyStyles}>{bodyText}</p>
       <div className="flex flex-wrap gap-4">
         {techList.map((tech, index) => (
-          <div
+          <motion.div
             key={index}
             className="h-16 w-16 flex justify-center items-center"
+            variants={scaleIn(index)}
+            initial="initial"
+            whileInView="final"
+            viewport={{ once: true }}
           >
             <img
               className={`p-2 h-14 rounded-xl shadow-lg ${tech.shadow} hover:h-16 transition-all duration-300`}
               src={tech.imgSrc}
               alt={tech.stack + " Logo"}
             />
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

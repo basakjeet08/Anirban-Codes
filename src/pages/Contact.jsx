@@ -8,6 +8,8 @@ import {
   primaryButtonStyles,
 } from "../styles";
 import { contactData } from "../constants/data";
+import { motion } from "framer-motion";
+import { horizontalSlide } from "../animations/variant";
 
 const Form = ({ accessKey }) => {
   const formRef = useRef(null);
@@ -86,7 +88,17 @@ const Contact = () => {
     // Container for Contact Me Section
     <div id={id} className="flex flex-col gap-4 w-full pt-6">
       <h2 className={subHeadingStyles}>{sectionHeading}</h2>
-      <p className={bodyStyles}>{content}</p>
+
+      <motion.div
+        className="overflow-hidden"
+        variants={horizontalSlide("right")}
+        initial="initial"
+        whileInView="final"
+        viewport={{ once: true }}
+      >
+        <p className={bodyStyles}>{content}</p>
+      </motion.div>
+
       <Form accessKey={accessKey} />
     </div>
   );

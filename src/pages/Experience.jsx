@@ -10,6 +10,8 @@ import {
 } from "../styles";
 import { IoIosArrowDropup } from "react-icons/io";
 import { IoIosArrowDropdown } from "react-icons/io";
+import { easeInOut, motion } from "framer-motion";
+import { verticalStaggeredAnimation } from "../animations/variant";
 
 const ExperienceItem = ({
   experience: { company, timeline, jobTitle, location, description },
@@ -45,7 +47,14 @@ const ExperienceItem = ({
       </div>
 
       {/* Description is shown here if the user expands the card */}
-      {isExpanded && <p className={bodyStyles}>{description}</p>}
+      <motion.div
+        className="overflow-hidden"
+        initial={{ height: 0 }}
+        animate={isExpanded ? { height: "auto" } : { height: 0 }}
+        transition={{ duration: 0.3, easings: easeInOut }}
+      >
+        <p className={bodyStyles}>{description}</p>
+      </motion.div>
     </div>
   );
 };
@@ -60,9 +69,15 @@ const Experience = () => {
       <h2 className={subHeadingStyles}>{sectionHeading}</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {expList.map((experience, index) => (
-          <div key={index}>
+          <motion.div
+            key={index}
+            variants={verticalStaggeredAnimation(index)}
+            initial="initial"
+            whileInView="final"
+            viewport={{ once: true }}
+          >
             <ExperienceItem experience={experience} />
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
