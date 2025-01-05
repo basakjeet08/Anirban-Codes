@@ -181,12 +181,12 @@ export const socialData = {
   ],
 };
 
-export const contacts = {
+export const contactData = {
   id: "contact",
   sectionHeading: "Contact Me",
   content: `
       Feel free to reach out for project collaborations, freelance opportunities, or professional queries. 
       I'm always excited to connect with like-minded individuals!
   `,
-  email: "jeetbasak2002@gmail.com",
+  accessKey: "991b4a14-5d79-4a8b-9b38-d0e5da179175",
 };
