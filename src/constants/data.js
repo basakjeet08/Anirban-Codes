@@ -42,7 +42,7 @@ export const heroData = {
   info: `
         I am a passionate software developer with a strong foundation in Android development and backend systems using Spring Boot. 
         My journey has been driven by curiosity and a desire to create impactful digital experiences. 
-        Currently, I am diving into front-end web development, leveraging tools like React and Tailwind CSS, to become a dynamic full-stack developer capable of building end-to-end solutions.
+        Currently, I am polishing my front-end web development skills, leveraging tools like React and Tailwind CSS, to become a dynamic full-stack developer capable of building end-to-end solutions.
     `,
   profileImage: {
     src: myImage,
@@ -60,7 +60,8 @@ export const experienceData = {
       jobTitle: "Trainee Android Intern",
       location: "Remote",
       description: `
-        As an Android intern at MBITS, I Contributed to Android App development, implementing new features, optimizing performance, and adhering to Android best practices using Kotlin and Jetpack Compose.
+        During my internship at MBITS, I contributed to Android app development, focusing on healthcare and fitness solutions. The app tracked health metrics, providing users with valuable insights. 
+        I developed a track screen with interactive charts to visualize these metrics, enhancing usability and enabling seamless health monitoring.
     `,
     },
 
@@ -72,7 +73,7 @@ export const experienceData = {
       description: `
         At IoT Lab, I began as an Android Developer, where I developed innovative solutions integrating IoT technologies with Android apps. 
         Within a year, I was promoted to Android Developer Lead, overseeing a team of 10+ developers. 
-        Together, we delivered several successful projects that bridged the gap between hardware and software, enhancing IoT functionality and user engagement.
+        Together, we delivered several successful projects and hosted sereval events.
     `,
     },
   ],
@@ -83,7 +84,7 @@ export const technologyData = {
   bodyText: `
       My technical journey began with Android development, where I created seamless and intuitive mobile experiences. 
       Over time, I delved into backend systems using Java and Spring Boot, building scalable and secure APIs. 
-      To expand my expertise, I have embraced front-end web development, exploring tools like React and Tailwind CSS to craft visually appealing and interactive user interfaces. This multifaceted approach enables me to deliver holistic and efficient software solutions.
+      To expand my expertise, I have embraced front-end web development, exploring tools like React and Tailwind CSS to craft visually appealing and interactive user interfaces.
   `,
   techList: [
     { imgSrc: javaLogo, shadow: "shadow-red-500", stack: "Java" },
@@ -117,7 +118,7 @@ export const projectData = {
       stack: ["Android", "Jetpack Compose", "Data Visualization"],
       githubLink: "https://github.com/basakjeet08/JetChart",
       description: `
-        JetChart is a Jetpack Compose chart library built using SOLID principles and the strategy design pattern. It emphasizes code reusability and scalability, ensuring ease of integration into various projects. The library leverages the Java Canvas API and Kotlin DrawScopes for high-performance custom rendering, making it a robust solution for data visualization needs.
+        JetChart is a Jetpack Compose chart library built using SOLID principles and the strategy design pattern. It emphasizes code reusability and scalability, ensuring ease of integration into various projects. The library leverages the Java Canvas API and Kotlin DrawScopes for high-performance custom rendering, making it a robust solution for data visualization needs in android.
     `,
     },
 
@@ -126,7 +127,7 @@ export const projectData = {
       stack: ["Android", "Spring Boot", "Published", "Firebase Auth"],
       githubLink: "https://github.com/iot-lab-kiit/IoT-Teacher-Review-App",
       description: `
-        Kritique App empowers students to provide feedback and ratings for faculty members, fostering a culture of continuous improvement. Its intuitive interfaces, robust data handling, and detailed analytics ensure transparency and reliability.
+        Kritique App allows students to provide feedback and ratings for faculty members, fostering a culture of continuous improvement. Its intuitive interfaces, robust data handling, and detailed analytics ensure transparency and reliability.
     `,
     },
     {
@@ -134,9 +135,7 @@ export const projectData = {
       stack: ["Android", "Kotlin", "Jetpack Compose"],
       githubLink: "https://github.com/iot-lab-kiit/Scavenger-Hunt-App",
       description: `
-        Matrix App is a comprehensive platform designed to streamline user interactions and task management. 
-        My contributions included developing robust networking logic, creating a unified design system for a consistent user experience, and implementing a highly efficient QR scanner module. 
-        These features collectively improved app efficiency and usability, catering to diverse user needs.
+        The Matrix App was developed as the central tool for the treasure hunt event at KIIT Fest 7.0. It featured a QR scanner for clue scanning and direction assistance, enhancing the treasure hunt experience. As the lead developer, I oversaw the app's development, ensuring robust functionality, a seamless user experience, and smooth event execution.
     `,
     },
   ],
@@ -146,7 +145,7 @@ export const socialData = {
   id: "social",
   sectionHeading: "Socials",
   content: `
-      Connecting with people is at the heart of growth and collaboration. From showcasing my projects on GitHub to networking on LinkedIn and sharing creative moments on Instagram, these platforms represent my journey. Let’s connect and create something impactful together.
+      Connecting with people is at the heart of growth and collaboration. From showcasing my projects on GitHub to networking on LinkedIn and sharing creative moments on Instagram, these platforms represent my journey. Let's connect and create something impactful together!
   `,
   socialList: [
     {

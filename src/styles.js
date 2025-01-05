@@ -6,7 +6,7 @@ export const bodyStyles = `text-sm font-medium text-onBackground font-mcLaren op
 export const captionStyles = `text-xs font-thin text-onBackground font-mcLaren opacity-35`;
 
 // Button Styles
-export const primaryButtonStyles = `rounded-lg bg-primary hover:opacity-80 active:opacity-30 transition-all duration-300 text-onBackground`;
+export const primaryButtonStyles = `rounded-lg bg-cardVariant hover:bg-primary active:opacity-30 transition-all duration-300 text-onBackground`;
 
 // Card Styles
 export const primaryCard = `flex flex-col gap-3 p-4 bg-card rounded-lg shadow-sm hover:shadow-md hover:shadow-primary transition-all duration-300`;

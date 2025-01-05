@@ -9,10 +9,10 @@ const Hero = () => {
   return (
     <div
       id={id}
-      className="w-full mt-32 flex flex-col gap-y-4 gap-x-24 justify-center items-center lg:flex-row-reverse"
+      className="w-full pt-32 flex flex-col gap-y-4 gap-x-24 justify-center items-center lg:flex-row-reverse"
     >
       <img
-        className="h-36 md:h-48 lg:h-72 w-auto object-cover rounded-lg shadow-2xl shadow-primary"
+        className="w-1/3 max-w-80 max-h-80 object-cover rounded-full shadow-2xl shadow-primary outline-dashed outline-primary outline-offset-4 lg:outline-offset-8"
         src={profileImage.src}
         alt={profileImage.alt}
       />

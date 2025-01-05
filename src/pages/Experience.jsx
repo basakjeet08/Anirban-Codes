@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { experienceData } from "../constants/data";
-import { AiFillDownCircle } from "react-icons/ai";
-import { AiFillUpCircle } from "react-icons/ai";
 import {
   subHeadingStyles,
   titleStyles,
   captionStyles,
   bodyStyles,
   primaryCard,
+  primaryButtonStyles,
 } from "../styles";
+import { IoIosArrowDropup } from "react-icons/io";
+import { IoIosArrowDropdown } from "react-icons/io";
 
 const ExperienceItem = ({
   experience: { company, timeline, jobTitle, location, description },
@@ -26,14 +27,14 @@ const ExperienceItem = ({
 
         <div className="flex gap-2 items-center">
           <p className={captionStyles}>{location}</p>
-          {isExpanded ? (
-            <AiFillUpCircle onClick={toggle} className="h-5 w-5 text-primary" />
-          ) : (
-            <AiFillDownCircle
-              onClick={toggle}
-              className="h-5 w-5 text-primary"
-            />
-          )}
+
+          <div onClick={toggle} className={`${primaryButtonStyles} p-1`}>
+            {isExpanded ? (
+              <IoIosArrowDropup className="h-5 w-5" />
+            ) : (
+              <IoIosArrowDropdown className="h-5 w-5" />
+            )}
+          </div>
         </div>
       </div>
 
