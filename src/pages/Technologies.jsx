@@ -1,11 +1,6 @@
 import React from "react";
 import { technologyData } from "../constants/data";
-import {
-  bodyStyles,
-  captionStyles,
-  secondaryCard,
-  subHeadingStyles,
-} from "../styles";
+import { bodyStyles, secondaryCard, subHeadingStyles } from "../styles";
 import { scaleIn } from "../animations/variant";
 import { motion } from "framer-motion";
 import { horizontalSlide } from "../animations/variant";
@@ -44,7 +39,7 @@ const Technologies = () => {
             />
 
             <label
-              className={`${captionStyles} ${secondaryCard} absolute hidden opacity-100 z-10 top-20 text-center transition-all duration-300 group-hover:inline`}
+              className={`${secondaryCard} text-xs font-thin text-onBackground font-mcLaren absolute hidden z-10 top-20 text-center transition-all duration-300 group-hover:inline`}
             >
               {tech.stack}
             </label>
