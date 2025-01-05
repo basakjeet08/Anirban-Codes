@@ -17,7 +17,7 @@ const Technologies = () => {
           <motion.div
             key={index}
             className="h-16 w-16 flex justify-center items-center"
-            variants={scaleIn()}
+            variants={scaleIn(index)}
             initial="initial"
             whileInView="final"
             viewport={{ once: true }}

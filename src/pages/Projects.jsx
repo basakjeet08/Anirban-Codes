@@ -10,6 +10,8 @@ import {
 } from "../styles";
 import { projectData } from "../constants/data";
 import { FaRegShareFromSquare } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { verticalStaggeredAnimation } from "../animations/variant";
 
 const ProjectItem = ({
   project: { image, title, stack, githubLink, description },
@@ -61,9 +63,15 @@ const Projects = () => {
       <h2 className={subHeadingStyles}>{sectionHeading}</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         {projectList.map((project, index) => (
-          <div key={index}>
+          <motion.div
+            key={index}
+            variants={verticalStaggeredAnimation(index)}
+            initial="initial"
+            whileInView="final"
+            viewport={{ once: true }}
+          >
             <ProjectItem project={project} />
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

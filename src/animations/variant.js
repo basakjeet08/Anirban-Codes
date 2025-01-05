@@ -1,4 +1,4 @@
-import { easeInOut } from "framer-motion";
+import { delay, easeInOut } from "framer-motion";
 
 export const horizontalSlide = (direction, delay = 0.2) => {
   return {
@@ -23,7 +23,7 @@ export const horizontalSlide = (direction, delay = 0.2) => {
   };
 };
 
-export const scaleIn = () => {
+export const scaleIn = (index, delayPerIndex = 0.1) => {
   return {
     // Acts as initial state
     initial: {
@@ -36,8 +36,27 @@ export const scaleIn = () => {
       opacity: 1,
       scale: 1,
       transition: {
-        duration: 0.75,
+        duration: 0.3,
+        delay: index * delayPerIndex,
         easings: easeInOut,
+      },
+    },
+  };
+};
+
+export const verticalStaggeredAnimation = (index, delayPerIndex = 0.2) => {
+  return {
+    initial: {
+      y: 100,
+      opacity: 0,
+    },
+
+    final: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: index * delayPerIndex,
       },
     },
   };
