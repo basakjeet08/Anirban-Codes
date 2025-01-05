@@ -65,9 +65,9 @@ const Experience = () => {
 
   return (
     // Experience Container
-    <div id={id} className="flex flex-col gap-4 w-full pt-6">
+    <div id={id} className="flex flex-col gap-8 w-full pt-6">
       <h2 className={subHeadingStyles}>{sectionHeading}</h2>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {expList.map((experience, index) => (
           <motion.div
             key={index}
