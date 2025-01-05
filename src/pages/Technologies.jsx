@@ -1,6 +1,11 @@
 import React from "react";
 import { technologyData } from "../constants/data";
-import { bodyStyles, subHeadingStyles } from "../styles";
+import {
+  bodyStyles,
+  captionStyles,
+  secondaryCard,
+  subHeadingStyles,
+} from "../styles";
 import { scaleIn } from "../animations/variant";
 import { motion } from "framer-motion";
 import { horizontalSlide } from "../animations/variant";
@@ -26,17 +31,23 @@ const Technologies = () => {
         {techList.map((tech, index) => (
           <motion.div
             key={index}
-            className="h-16 w-16 flex justify-center items-center"
+            className="relative h-16 w-16 flex justify-center items-center group"
             variants={scaleIn(index)}
             initial="initial"
             whileInView="final"
             viewport={{ once: true }}
           >
             <img
-              className={`p-2 h-14 rounded-xl shadow-lg ${tech.shadow} hover:h-16 transition-all duration-300`}
+              className={`p-2 h-14 w-14 object-contain rounded-xl shadow-lg ${tech.shadow} group-hover:h-16 group-hover:w-16 transition-all duration-300`}
               src={tech.imgSrc}
               alt={tech.stack + " Logo"}
             />
+
+            <label
+              className={`${captionStyles} ${secondaryCard} absolute hidden opacity-100 z-10 top-20 text-center transition-all duration-300 group-hover:inline`}
+            >
+              {tech.stack}
+            </label>
           </motion.div>
         ))}
       </div>
