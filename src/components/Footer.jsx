@@ -28,7 +28,7 @@ const Footer = () => {
               key={socialItem.url}
               href={socialItem.url}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-primary/60 hover:shadow-glow transition-all text-xs font-sans text-white/80 hover:text-white"
             >
               <img

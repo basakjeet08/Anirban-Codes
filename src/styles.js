@@ -5,12 +5,9 @@ export const sectionKickerStyles = `text-xs font-semibold uppercase tracking-[0.
 export const titleStyles = `text-lg font-semibold text-onBackground font-display`;
 export const bodyStyles = `text-sm md:text-base font-normal text-onBackground/80 font-sans leading-relaxed`;
 export const captionStyles = `text-xs font-normal text-onBackground/50 font-sans`;
-export const gradientHeading = `gradient-text`;
 
 // Button Styles
 export const primaryButtonStyles = `inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary via-[#8b5cf6] to-accent px-5 py-2.5 text-sm font-semibold text-white shadow-glow hover:shadow-glow-lg hover:brightness-110 active:opacity-80 transition-all duration-300 font-sans`;
-export const ghostButtonStyles = `inline-flex items-center justify-center gap-2 rounded-xl glass px-5 py-2.5 text-sm font-semibold text-onBackground hover:border-primary/60 hover:shadow-glow active:opacity-80 transition-all duration-300 font-sans`;
-export const legacyPrimaryButtonStyles = `rounded-lg bg-cardVariant hover:bg-primary active:opacity-30 transition-all duration-300 text-onBackground font-sans`;
 
 // Card Styles
 export const primaryCard = `card-lift flex flex-col gap-3 p-5 bg-card/80 backdrop-blur rounded-2xl border border-white/10 shadow-sm hover:shadow-glow-lg hover:border-primary/40 transition-all duration-300`;

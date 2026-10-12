@@ -1,17 +1,34 @@
-// Technologies Images
-import androidLogo from "../assets/technologies/androidLogo.png";
-import cssLogo from "../assets/technologies/cssLogo.png";
-import firebaseLogo from "../assets/technologies/firebaseLogo.png";
-import gitLogo from "../assets/technologies/gitLogo.png";
-import htmlLogo from "../assets/technologies/htmlLogo.png";
-import javaLogo from "../assets/technologies/javaLogo.png";
-import javascriptLogo from "../assets/technologies/javascriptLogo.png";
-import kotlinLogo from "../assets/technologies/kotlinLogo.png";
-import mySqlLogo from "../assets/technologies/mySqlLogo.png";
-import postgreLogo from "../assets/technologies/postgreLogo.png";
-import reactLogo from "../assets/technologies/reactLogo.png";
-import springLogo from "../assets/technologies/springLogo.png";
-import tailwindLogo from "../assets/technologies/tailwindLogo.png";
+// Technology Icons
+import { FaCode, FaDatabase, FaJava } from "react-icons/fa";
+import {
+  SiAndroid,
+  SiAngular,
+  SiCelery,
+  SiCss3,
+  SiDjango,
+  SiDocker,
+  SiElasticsearch,
+  SiFirebase,
+  SiGit,
+  SiHtml5,
+  SiJavascript,
+  SiJetpackcompose,
+  SiKotlin,
+  SiLinux,
+  SiMercurial,
+  SiMysql,
+  SiPostman,
+  SiPostgresql,
+  SiPython,
+  SiRabbitmq,
+  SiReact,
+  SiRedis,
+  SiSpring,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
+
+// Profile Image
 import myImage from "../assets/myImage.jpg";
 
 // Projects Images
@@ -29,6 +46,7 @@ export const headerData = {
   menuItems: [
     { id: "#home", title: "Home" },
     { id: "#experience", title: "Experience" },
+    { id: "#technologies", title: "Stack" },
     { id: "#project", title: "Projects" },
     { id: "#social", title: "Socials" },
     { id: "#contact", title: "Contact Me" },
@@ -70,7 +88,8 @@ export const experienceData = {
   id: "experience",
   kicker: "Career",
   sectionHeading: "Experience",
-  blurb: "Building scalable backend systems, delivering Android applications, and leading development teams.",
+  blurb:
+    "Building scalable backend systems, delivering Android applications, and leading development teams.",
   expList: [
     {
       id: "instahyre",
@@ -125,52 +144,90 @@ export const experienceData = {
 };
 
 export const technologyData = {
+  id: "technologies",
+  kicker: "Stack",
   sectionHeading: "Technologies",
   bodyText: `
-    I primarily work with Python and Django for backend development, alongside
-    Java and Spring Boot for REST APIs and application services, using Spring
-    Data JPA and Spring AI.
-
-    On the frontend, I work with Angular, AngularJS, TypeScript, JavaScript,
-    React, HTML, CSS, and Tailwind CSS.
-
-    I work with SQL, PostgreSQL, and MySQL for databases, Elasticsearch for
-    search, and Redis for caching.
-
-    For background processing and messaging, I use Celery and RabbitMQ.
-
-    My development tools and infrastructure include Docker, Git, Mercurial,
-    Linux, Postman, and Firebase.
-
-    My mobile development experience includes Kotlin, the Android SDK, and Jetpack Compose.
+    I primarily work with Python and Django, Java and Spring Boot, and Angular.
+    My experience also spans Android development, databases, search, caching,
+    and development tools.
   `,
-  techList: [
-    { imgSrc: javaLogo, shadow: "shadow-red-500", stack: "Java" },
-    { imgSrc: springLogo, shadow: "shadow-green-500", stack: "Spring Boot" },
-    { imgSrc: kotlinLogo, shadow: "shadow-blue-500", stack: "Kotlin" },
-    { imgSrc: androidLogo, shadow: "shadow-green-300", stack: "Android" },
-    { imgSrc: htmlLogo, shadow: "shadow-orange-500", stack: "HTML" },
-    { imgSrc: cssLogo, shadow: "shadow-blue-500", stack: "CSS" },
+  groups: [
     {
-      imgSrc: javascriptLogo,
-      shadow: "shadow-yellow-500",
-      stack: "JavaScript",
+      title: "Backend",
+      techList: [
+        { stack: "Python", icon: SiPython },
+        { stack: "Django", icon: SiDjango },
+        { stack: "Java", icon: FaJava },
+        { stack: "Spring Boot / Spring Data JPA / Spring AI", icon: SiSpring },
+        { stack: "REST APIs", icon: FaCode },
+        { stack: "Celery", icon: SiCelery },
+        { stack: "RabbitMQ", icon: SiRabbitmq },
+      ],
     },
-    { imgSrc: reactLogo, shadow: "shadow-blue-400", stack: "React" },
-    { imgSrc: tailwindLogo, shadow: "shadow-blue-500", stack: "Tailwind CSS" },
-    { imgSrc: mySqlLogo, shadow: "shadow-white", stack: "MySQL" },
-    { imgSrc: postgreLogo, shadow: "shadow-blue-500", stack: "PostgreSQL" },
-    { imgSrc: firebaseLogo, shadow: "shadow-yellow-500", stack: "Firebase" },
-    { imgSrc: gitLogo, shadow: "shadow-orange-700", stack: "Git" },
+    {
+      title: "Frontend",
+      techList: [
+        { stack: "Angular / AngularJS", icon: SiAngular },
+        { stack: "TypeScript", icon: SiTypescript },
+        { stack: "JavaScript", icon: SiJavascript },
+        { stack: "React", icon: SiReact },
+        { stack: "HTML", icon: SiHtml5 },
+        { stack: "CSS", icon: SiCss3 },
+        { stack: "Tailwind CSS", icon: SiTailwindcss },
+      ],
+    },
+    {
+      title: "Databases, Search & Caching",
+      techList: [
+        { stack: "SQL", icon: FaDatabase },
+        { stack: "PostgreSQL", icon: SiPostgresql },
+        { stack: "MySQL", icon: SiMysql },
+        { stack: "Elasticsearch", icon: SiElasticsearch },
+        { stack: "Redis", icon: SiRedis },
+      ],
+    },
+    {
+      title: "Mobile",
+      techList: [
+        { stack: "Kotlin", icon: SiKotlin },
+        { stack: "Android SDK", icon: SiAndroid },
+        { stack: "Jetpack Compose", icon: SiJetpackcompose },
+      ],
+    },
+    {
+      title: "Tools",
+      techList: [
+        { stack: "Docker", icon: SiDocker },
+        { stack: "Git", icon: SiGit },
+        { stack: "Linux", icon: SiLinux },
+        { stack: "Mercurial", icon: SiMercurial },
+        { stack: "Postman", icon: SiPostman },
+        { stack: "Firebase", icon: SiFirebase },
+      ],
+    },
   ],
 };
 
 export const projectData = {
   id: "project",
+  kicker: "Selected work",
   sectionHeading: "Projects",
+  blurb:
+    "A selection of full-stack applications, developer tools, and Android projects I've built.",
+  filters: [
+    { id: "all", title: "All" },
+    { id: "full-stack", title: "Full-stack" },
+    { id: "android", title: "Android" },
+    { id: "backend", title: "Backend" },
+    { id: "frontend", title: "Frontend" },
+    { id: "tools", title: "Tools" },
+  ],
   projectList: [
     {
       title: "Harmoniq",
+      categories: ["full-stack", "backend", "frontend"],
+      featured: true,
       stack: [
         "Spring Boot",
         "Spring AI",
@@ -198,6 +255,8 @@ export const projectData = {
 
     {
       title: "AgentHub",
+      categories: ["tools"],
+      featured: true,
       stack: ["Python", "Textual", "TUI", "textual-tty", "bittty"],
       links: [
         {
@@ -222,16 +281,11 @@ export const projectData = {
 
     {
       title: "Kritique App",
-      stack: ["Android", "Spring Boot", "Firebase Auth", "Published"],
+      categories: ["full-stack", "android", "backend"],
+      featured: true,
+      status: "Published",
+      stack: ["Android", "Spring Boot", "Firebase Auth"],
       links: [
-        {
-          label: "Android",
-          url: "https://github.com/basakjeet08/IoT-Teacher-Review-App",
-        },
-        {
-          label: "Backend",
-          url: "https://github.com/basakjeet08/Kritique-Backend-Clone",
-        },
         {
           label: "Play Store",
           url: "https://play.google.com/store/apps/details?id=in.iot.lab.kritique&hl=en_US",
@@ -251,6 +305,7 @@ export const projectData = {
       image: jetchartCover,
       imageAlt: "JetChart charting library cover",
       title: "JetChart",
+      categories: ["android"],
       stack: ["Android", "Jetpack Compose", "Data Visualization"],
       links: [
         {
@@ -269,6 +324,7 @@ export const projectData = {
 
     {
       title: "Matrix App",
+      categories: ["android"],
       stack: ["Android", "Kotlin", "Jetpack Compose"],
       links: [
         {

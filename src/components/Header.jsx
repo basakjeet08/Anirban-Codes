@@ -31,6 +31,12 @@ const Header = ({ scrollContainerRef }) => {
   const menuRef = useRef(null);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
+  const handleMenuKeyDown = (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+      menuRef.current?.querySelector("button")?.focus();
+    }
+  };
 
   useEffect(() => {
     const container = scrollContainerRef?.current;
@@ -127,18 +133,23 @@ const Header = ({ scrollContainerRef }) => {
         </a>
 
         {/* Mobile Navigation */}
-        <nav className="lg:hidden relative" ref={menuRef}>
+        <nav
+          className="lg:hidden relative"
+          ref={menuRef}
+          onKeyDown={handleMenuKeyDown}
+        >
           <button
+            type="button"
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
-            aria-controls="mobile-navigation"
+            aria-controls={isMenuOpen ? "mobile-navigation" : undefined}
             onClick={toggleMenu}
             className="p-2 rounded-lg glass text-white"
           >
             {isMenuOpen ? (
-              <IoIosCloseCircleOutline className="h-5 w-5" />
+              <IoIosCloseCircleOutline aria-hidden className="h-5 w-5" />
             ) : (
-              <TiThMenu className="h-5 w-5" />
+              <TiThMenu aria-hidden className="h-5 w-5" />
             )}
           </button>
 

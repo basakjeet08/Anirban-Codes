@@ -43,7 +43,9 @@ const ExperienceItem = ({ experience, expanded, onToggle }) => {
           <h3 className={titleStyles}>{company}</h3>
           <p className="text-sm font-sans font-medium text-primarySoft flex flex-wrap items-center gap-1.5">
             <FaBriefcase aria-hidden className="text-xs shrink-0" /> {jobTitle}
-            <span aria-hidden className="text-white/30">•</span>
+            <span aria-hidden className="text-white/30">
+              •
+            </span>
             <span className="text-white/60 font-normal flex items-center gap-1">
               <FaMapMarkerAlt aria-hidden className="text-[11px] shrink-0" />
               {location}
@@ -59,6 +61,7 @@ const ExperienceItem = ({ experience, expanded, onToggle }) => {
           className="p-2 rounded-xl glass text-white hover:border-primary/60 hover:shadow-glow transition-all shrink-0"
         >
           <IoIosArrowDown
+            aria-hidden
             className={`h-4 w-4 transition-transform duration-300 ${
               expanded ? "rotate-180" : ""
             }`}
@@ -99,7 +102,9 @@ const ExperienceItem = ({ experience, expanded, onToggle }) => {
                     key={highlight}
                     className="text-sm font-sans text-white/75 flex gap-2"
                   >
-                    <span aria-hidden className="text-primary mt-0.5">▸</span>
+                    <span aria-hidden className="text-primary mt-0.5">
+                      ▸
+                    </span>
                     <span>{highlight}</span>
                   </li>
                 ))}
@@ -114,6 +119,7 @@ const ExperienceItem = ({ experience, expanded, onToggle }) => {
           type="button"
           onClick={onToggle}
           aria-expanded={expanded}
+          aria-label={`Expand ${company} details`}
           className="text-left text-xs font-sans font-medium text-primarySoft hover:text-white transition-colors"
         >
           Show impact + details →

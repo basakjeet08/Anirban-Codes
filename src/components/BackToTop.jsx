@@ -41,11 +41,12 @@ const BackToTop = ({ scrollContainerRef }) => {
 
   return (
     <button
+      type="button"
       onClick={scrollToTop}
       aria-label="Back to top"
       className="fixed bottom-6 right-6 z-50 h-11 w-11 rounded-full grid place-items-center bg-gradient-to-br from-primary to-accent text-white shadow-glow-lg hover:brightness-110 active:scale-95 transition-all"
     >
-      <FaArrowUp />
+      <FaArrowUp aria-hidden />
     </button>
   );
 };

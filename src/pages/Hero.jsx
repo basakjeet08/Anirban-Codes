@@ -21,20 +21,16 @@ const Hero = () => {
     >
       <div className="flex flex-col gap-10 lg:flex-row-reverse lg:items-center lg:gap-16">
         {/* Profile Image */}
-        <motion.div
-          className="relative mx-auto shrink-0"
+        <motion.img
+          className="mx-auto shrink-0 w-56 h-56 md:w-72 md:h-72 object-cover rounded-full shadow-2xl shadow-primary outline-dashed outline-primary outline-offset-4 lg:outline-offset-8"
+          src={profileImage.src}
+          alt={profileImage.alt}
+          loading="eager"
           variants={horizontalSlide("left")}
           initial="initial"
           whileInView="final"
           viewport={{ once: true }}
-        >
-          <img
-            className="w-56 h-56 md:w-72 md:h-72 object-cover rounded-full shadow-2xl shadow-primary outline-dashed outline-primary outline-offset-4 lg:outline-offset-8"
-            src={profileImage.src}
-            alt={profileImage.alt}
-            loading="eager"
-          />
-        </motion.div>
+        />
 
         {/* Introduction and Actions */}
         <motion.div

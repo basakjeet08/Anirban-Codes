@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import PropTypes from "prop-types";
 import {
   bodyStyles,
@@ -14,38 +14,48 @@ import { horizontalSlide } from "../animations/variant";
 
 const Form = ({ accessKey }) => {
   const formRef = useRef(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onSubmitPressed = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    if (isSubmitting) return;
 
-    formData.append("access_key", accessKey);
+    setIsSubmitting(true);
+    try {
+      const formData = new FormData(formRef.current);
+      formData.set("access_key", accessKey);
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(Object.fromEntries(formData)),
+      });
+      const result = await response.json();
+      if (!response.ok || !result.success) {
+        throw new Error("Message submission failed");
+      }
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    }).then((res) => res.json());
-
-    if (res.success) {
       formRef.current.reset();
       alert("Message sent successfully.");
+    } catch {
+      alert("Unable to send your message. Please try again or contact me by email.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
     <div className="flex justify-center pt-20">
-      <div className="w-2/3 min-w-[400px] max-w-[600px]">
+      <div className="w-full sm:w-2/3 max-w-[600px]">
         <form
           ref={formRef}
           className={`${primaryCard} items-center`}
           onSubmit={onSubmitPressed}
+          aria-label="Contact form"
+          aria-busy={isSubmitting}
         >
           <p className={titleStyles}>Email Me</p>
 
@@ -53,6 +63,7 @@ const Form = ({ accessKey }) => {
             className={inputStyle}
             type="text"
             name="subject"
+            aria-label="Subject"
             placeholder="Subject"
             required
           />
@@ -61,6 +72,7 @@ const Form = ({ accessKey }) => {
             className={inputStyle}
             type="email"
             name="email"
+            aria-label="Your email address"
             placeholder="Your email address"
             autoComplete="email"
             required
@@ -69,12 +81,17 @@ const Form = ({ accessKey }) => {
           <textarea
             className={`${inputStyle} h-[200px]`}
             name="message"
+            aria-label="Your message"
             placeholder="Your message"
             required
           />
 
-          <button className={`${primaryButtonStyles} p-3 w-2/3`} type="submit">
-            Send message
+          <button
+            className={`${primaryButtonStyles} p-3 w-2/3`}
+            type="submit"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? "Sending…" : "Send message"}
           </button>
         </form>
       </div>
@@ -87,7 +104,11 @@ const Contact = () => {
   const { id, sectionHeading, content, accessKey } = contactData;
   return (
     // Container for Contact Me Section
-    <div id={id} className="flex flex-col gap-8 w-full pt-6">
+    <section
+      id={id}
+      className="flex flex-col gap-8 w-full pt-6"
+      aria-label={sectionHeading}
+    >
       <h2 className={subHeadingStyles}>{sectionHeading}</h2>
 
       <motion.div
@@ -101,7 +122,7 @@ const Contact = () => {
       </motion.div>
 
       <Form accessKey={accessKey} />
-    </div>
+    </section>
   );
 };
 

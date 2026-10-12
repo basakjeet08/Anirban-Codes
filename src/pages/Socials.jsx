@@ -7,27 +7,35 @@ import {
   verticalStaggeredAnimation,
 } from "../animations/variant";
 
-const SocialItems = ({ social: { type, url, logo, name } }) => {
-  return (
-    <a href={url} target="_blank">
-      <div className={primaryRowCard}>
-        <img
-          className="h-10 w-10 object-contain"
-          src={logo}
-          alt={type + " Logo"}
-        />
-        <p className={bodyStyles}>{name}</p>
-      </div>
-    </a>
-  );
-};
+const SocialItems = ({ social: { type, url, logo, name } }) => (
+  <a
+    href={url}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={`${type}: ${name}`}
+  >
+    <div className={primaryRowCard}>
+      <img
+        className="h-10 w-10 object-contain"
+        src={logo}
+        alt=""
+        loading="lazy"
+      />
+      <p className={bodyStyles}>{name}</p>
+    </div>
+  </a>
+);
 
 const Socials = () => {
   // UI Data for the Socials Section
   const { id, sectionHeading, content, socialList } = socialData;
 
   return (
-    <div id={id} className="flex flex-col gap-8 w-full pt-6">
+    <section
+      id={id}
+      className="flex flex-col gap-8 w-full pt-6"
+      aria-label={sectionHeading}
+    >
       <h2 className={subHeadingStyles}>{sectionHeading}</h2>
       <motion.div
         className="overflow-hidden"
@@ -42,7 +50,7 @@ const Socials = () => {
       <div className="flex flex-row flex-wrap gap-4">
         {socialList.map((socialItem, index) => (
           <motion.div
-            key={index}
+            key={socialItem.url}
             variants={verticalStaggeredAnimation(index)}
             initial="initial"
             whileInView="final"
@@ -52,7 +60,7 @@ const Socials = () => {
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
