@@ -3,7 +3,6 @@ import androidLogo from "../assets/technologies/androidLogo.png";
 import cssLogo from "../assets/technologies/cssLogo.png";
 import firebaseLogo from "../assets/technologies/firebaseLogo.png";
 import gitLogo from "../assets/technologies/gitLogo.png";
-import graphQlLogo from "../assets/technologies/graphQlLogo.png";
 import htmlLogo from "../assets/technologies/htmlLogo.png";
 import javaLogo from "../assets/technologies/javaLogo.png";
 import javascriptLogo from "../assets/technologies/javascriptLogo.png";
@@ -17,7 +16,6 @@ import myImage from "../assets/myImage.jpg";
 
 // Projects Images
 import jetchartCover from "../assets/projects/jetchartCover.jpg";
-import reactiveTodoImage from "../assets/projects/reactiveTodoImage.png";
 
 // Socials Images
 import githubLogo from "../assets/socials/githubLogo.png";
@@ -31,8 +29,8 @@ export const headerData = {
   menuItems: [
     { id: "#home", title: "Home" },
     { id: "#experience", title: "Experience" },
-    { id: "#project", title: "Project" },
-    { id: "#social", title: "Social" },
+    { id: "#project", title: "Projects" },
+    { id: "#social", title: "Socials" },
     { id: "#contact", title: "Contact Me" },
   ],
 };
@@ -41,41 +39,77 @@ export const heroData = {
   id: "home",
   name: "Anirban Basak",
   info: `
-        I am a passionate software developer with a strong foundation in Android development and backend systems using Spring Boot. 
-        My journey has been driven by curiosity and a desire to create impactful digital experiences. 
-        Currently, I am polishing my front-end web development skills, leveraging tools like React and Tailwind CSS, to become a dynamic full-stack developer capable of building end-to-end solutions.
-    `,
+    I'm a Full-Stack Software Engineer working primarily with Python (Django),
+    Java (Spring Boot), and Angular.
+
+    Beyond this stack, I enjoy learning and experimenting with new technologies.
+
+    I enjoy building backend systems with a focus on scalability, performance,
+    maintainability, and clean architectures that can evolve as products grow.
+
+    I also enjoy frontend development, where small details can make an interface
+    easier and more enjoyable to use.
+  `,
   profileImage: {
     src: myImage,
-    alt: `Anirban Basak's Image`,
+    alt: "Anirban Basak",
   },
 };
 
 export const experienceData = {
   id: "experience",
-  sectionHeading: "Experiences",
+  sectionHeading: "Experience",
   expList: [
     {
-      company: "MBITS Innovation Private Limited",
-      timeline: "June 2023 - Dec 2023",
-      jobTitle: "Trainee Android Intern",
-      location: "Remote",
+      company: "InstaHyre",
+      timeline: "June 2025 - Present",
+      jobTitle: "Software Engineer (SDE I)",
+      location: "Noida, India",
       description: `
-        During my internship at MBITS, I contributed to Android app development, focusing on healthcare and fitness solutions. The app tracked health metrics, providing users with valuable insights. 
-        I developed a track screen with interactive charts to visualize these metrics, enhancing usability and enabling seamless health monitoring.
-    `,
+        At InstaHyre, I own development of core candidate-facing pages and workflows.
+
+        I helped build and optimize an Elasticsearch-based candidate-job matching engine
+        serving 300K+ requests daily.
+
+        I reduced API latency by up to 65% across 10+ endpoints by optimizing queries,
+        eliminating N+1 queries, and implementing Redis caching.
+
+        I also built a Zoho Contacts integration syncing 60K+ recruiter records daily for CRM workflows,
+        and contributed to the platform's design system and reusable MJML email system.
+      `,
+    },
+
+    {
+      company: "MBITS Innovation Private Limited",
+      timeline: "May 2023 - December 2023",
+      jobTitle: "Android Developer Intern",
+      location: "Bengaluru, India (Remote)",
+      description: `
+        At MBITS, I worked on Android applications focused on health tracking
+        and media features.
+
+        I built a charting library with 15+ reusable components used across
+        90% of health-tracking screens.
+
+        I migrated a Spotify module to Jetpack Compose, reducing its codebase
+        size by 50%.
+
+        I also simplified backend integration by consolidating 24 API endpoints into 4.
+      `,
     },
 
     {
       company: "IoT Lab, KIIT",
       timeline: "Sep 2022 - Aug 2024",
       jobTitle: "Android Lead",
-      location: "DL - 007, KIIT",
+      location: "KIIT, Bhubaneswar",
       description: `
-        At IoT Lab, I began as an Android Developer, where I developed innovative solutions integrating IoT technologies with Android apps. 
-        Within a year, I was promoted to Android Developer Lead, overseeing a team of 10+ developers. 
-        Together, we delivered several successful projects and hosted sereval events.
-    `,
+        At IoT Lab, I started as an Android Developer and was promoted to Android
+        Lead within a year, leading a team of 10+ developers.
+
+        I worked on Android and IoT-based projects while mentoring developers,
+        coordinating project delivery, and helping organize technical events.
+      `,
     },
   ],
 };
@@ -83,9 +117,22 @@ export const experienceData = {
 export const technologyData = {
   sectionHeading: "Technologies",
   bodyText: `
-      My technical journey began with Android development, where I created seamless and intuitive mobile experiences. 
-      Over time, I delved into backend systems using Java and Spring Boot, building scalable and secure APIs. 
-      To expand my expertise, I have embraced front-end web development, exploring tools like React and Tailwind CSS to craft visually appealing and interactive user interfaces.
+    I primarily work with Python and Django for backend development, alongside
+    Java and Spring Boot for REST APIs and application services, using Spring
+    Data JPA and Spring AI.
+
+    On the frontend, I work with Angular, AngularJS, TypeScript, JavaScript,
+    React, HTML, CSS, and Tailwind CSS.
+
+    I work with SQL, PostgreSQL, and MySQL for databases, Elasticsearch for
+    search, and Redis for caching.
+
+    For background processing and messaging, I use Celery and RabbitMQ.
+
+    My development tools and infrastructure include Docker, Git, Mercurial,
+    Linux, Postman, and Firebase.
+
+    My mobile development experience includes Kotlin, the Android SDK, and Jetpack Compose.
   `,
   techList: [
     { imgSrc: javaLogo, shadow: "shadow-red-500", stack: "Java" },
@@ -104,7 +151,6 @@ export const technologyData = {
     { imgSrc: mySqlLogo, shadow: "shadow-white", stack: "MySQL" },
     { imgSrc: postgreLogo, shadow: "shadow-blue-500", stack: "PostgreSQL" },
     { imgSrc: firebaseLogo, shadow: "shadow-yellow-500", stack: "Firebase" },
-    { imgSrc: graphQlLogo, shadow: "shadow-pink-500", stack: "GraphQL" },
     { imgSrc: gitLogo, shadow: "shadow-orange-700", stack: "Git" },
   ],
 };
@@ -114,61 +160,116 @@ export const projectData = {
   sectionHeading: "Projects",
   projectList: [
     {
-      image: jetchartCover,
-      title: "JetChart",
-      stack: ["Android", "Jetpack Compose", "Data Visualization"],
-      githubLink: "https://github.com/basakjeet08/JetChart",
+      title: "Harmoniq",
+      stack: ["Spring Boot", "Spring AI", "PostgreSQL", "Angular", "Ollama", "Docker"],
+      links: [
+        {
+          label: "GitHub",
+          url: "https://github.com/basakjeet08/Harmoniq"
+        },
+      ],
       description: `
-        JetChart is a Jetpack Compose chart library built using SOLID principles and the strategy design pattern. It emphasizes code reusability and scalability, ensuring ease of integration into various projects. The library leverages the Java Canvas API and Kotlin DrawScopes for high-performance custom rendering, making it a robust solution for data visualization needs in android.
-    `,
+        Harmoniq is a mental health platform with community discussions,
+        a personalized feed, and an AI chatbot.
+
+        Users can discover relevant discussions and chat with an AI that
+        maintains context across messages.
+
+        I built the full-stack platform and used Docker Compose to simplify local setup.
+      `,
+    },
+
+    {
+      title: "AgentHub",
+      stack: ["Python", "Textual", "TUI", "textual-tty", "bittty"],
+      links: [
+        {
+          label: "GitHub",
+          url: "https://github.com/basakjeet08/AgentHub"
+        },
+      ],
+      description: `
+        AgentHub brings multiple coding-agent sessions and shell terminals into
+        one workspace while preserving each agent's native terminal interface.
+
+        Built with Python and Textual, it lets users discover and resume
+        existing sessions, switch between active agents, and track activity
+        in the sidebar.
+
+        On Linux, desktop notifications alert users when supported agents need
+        input or finish a task.
+
+        It supports multiple providers, including Codex, OpenCode, Devin, and Antigravity.
+      `,
     },
 
     {
       title: "Kritique App",
-      stack: ["Android", "Spring Boot", "Published", "Firebase Auth"],
-      githubLink: "https://github.com/iot-lab-kiit/IoT-Teacher-Review-App",
-      description: `
-        Kritique App allows students to provide feedback and ratings for faculty members, fostering a culture of continuous improvement. Its intuitive interfaces, robust data handling, and detailed analytics ensure transparency and reliability.
-    `,
-    },
-
-    {
-      image: reactiveTodoImage,
-      title: "Reactive Todos",
-      stack: [
-        "JavaScript",
-        "React",
-        "Spring Boot",
-        "PostGre SQL",
-        "Fullstack",
-        "Deployed",
+      stack: ["Android", "Spring Boot", "Firebase Auth", "Published"],
+      links: [
+        {
+          label: "Android",
+          url: "https://github.com/basakjeet08/IoT-Teacher-Review-App",
+        },
+        {
+          label: "Backend",
+          url: "https://github.com/basakjeet08/Kritique-Backend-Clone",
+        },
+        {
+          label: "Play Store",
+          url: "https://play.google.com/store/apps/details?id=in.iot.lab.kritique&hl=en_US",
+        },
       ],
-      githubLink: "https://github.com/basakjeet08/React-Todo-Website",
       description: `
-        Reactive Todo is a thoughtfully designed application that helps users efficiently manage their day-to-day tasks. 
-        Built with simplicity and usability in mind, it features a clean and intuitive UI that supports essential to-do app functionalities, making task management seamless and hassle-free.
-    `,
+        Kritique is a full-stack teacher review platform built with Android
+        and Spring Boot.
+
+        Students can rate educators, share feedback, and explore educator profiles.
+
+        The app reached 10K+ downloads and a 4.6-star rating on the Play Store.
+      `,
     },
 
     {
-      title: "StockBot",
-      stack: ["Java", "Spring Boot", "PostGre SQL", "Backend"],
-      githubLink: "https://github.com/basakjeet08/Stock-Bot",
+      image: jetchartCover,
+      imageAlt: "JetChart charting library cover",
+      title: "JetChart",
+      stack: ["Android", "Jetpack Compose", "Data Visualization"],
+      links: [
+        {
+          label: "GitHub",
+          url: "https://github.com/basakjeet08/JetChart"
+        },
+      ],
       description: `
-        Stock Bot is an Inventory Management System designed to streamline the management of store stocks and supplies. 
-        It enables users to efficiently track inventory levels, monitor stock availability, and manage supplies in real-time. 
-        With its robust functionality, this backend server provides APIs to simplify inventory control, reduce manual errors, and ensure smooth store operations.
-    `,
+        JetChart is a reusable Jetpack Compose library for adding
+        customizable charts to Android applications.
+
+        It uses SOLID principles and the Strategy pattern for extensibility,
+        with custom rendering through Kotlin DrawScope and the Canvas API.
+      `,
     },
 
     {
       title: "Matrix App",
       stack: ["Android", "Kotlin", "Jetpack Compose"],
-      githubLink: "https://github.com/iot-lab-kiit/Scavenger-Hunt-App",
+      links: [
+        {
+          label: "GitHub",
+          url: "https://github.com/iot-lab-kiit/Scavenger-Hunt-App",
+        },
+      ],
       description: `
-        The Matrix App was developed as the central tool for the treasure hunt event at KIIT Fest 7.0. It featured a QR scanner for clue scanning and direction assistance, enhancing the treasure hunt experience. As the lead developer, I oversaw the app's development, ensuring robust functionality, a seamless user experience, and smooth event execution.
-    `,
+        Matrix is a treasure hunt app that supported 900+ concurrent users
+        during a live event.
+
+        I led a team of 8 developers to deliver it within 10 days, building
+        networking modules, a shared design system, and a QR scanner.
+
+        Extensive testing and debugging reduced bugs by 66%.
+      `,
     },
+
   ],
 };
 
@@ -176,7 +277,8 @@ export const socialData = {
   id: "social",
   sectionHeading: "Socials",
   content: `
-      Connecting with people is at the heart of growth and collaboration. From showcasing my projects on GitHub to networking on LinkedIn and sharing creative moments on Instagram, these platforms represent my journey. Let's connect and create something impactful together!
+      Explore my projects on GitHub, connect with me on LinkedIn, or find my coding profile on LeetCode.
+      You can also reach me by email or connect on Instagram.
   `,
   socialList: [
     {
@@ -192,7 +294,7 @@ export const socialData = {
       logo: githubLogo,
     },
     {
-      type: "Leetcode",
+      type: "LeetCode",
       name: "anirban_0_0",
       url: "https://leetcode.com/u/anirban_0_0/",
       logo: leetcodeLogo,
@@ -216,8 +318,8 @@ export const contactData = {
   id: "contact",
   sectionHeading: "Contact Me",
   content: `
-      Feel free to reach out for project collaborations, freelance opportunities, or professional queries. 
-      I'm always excited to connect with like-minded individuals!
+    Have a project in mind or want to discuss a software engineering opportunity?
+    Send me a message about your project, team, or collaboration.
   `,
   accessKey: "991b4a14-5d79-4a8b-9b38-d0e5da179175",
 };

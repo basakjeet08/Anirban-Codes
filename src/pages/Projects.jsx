@@ -1,4 +1,3 @@
-import React from "react";
 import {
   bodyStyles,
   captionStyles,
@@ -14,7 +13,7 @@ import { motion } from "framer-motion";
 import { verticalStaggeredAnimation } from "../animations/variant";
 
 const ProjectItem = ({
-  project: { image, title, stack, githubLink, description },
+  project: { image, imageAlt, title, stack, links, description },
 }) => (
   // Card Container
   <div className={primaryCard}>
@@ -23,24 +22,35 @@ const ProjectItem = ({
       <img
         className="w-full rounded-lg object-contain"
         src={image}
-        alt="Project Image"
+        alt={imageAlt ?? `${title} project preview`}
       />
     )}
 
-    {/* Title and Github Link Container */}
+    {/* Title and Project Links Container */}
     <div className="flex flex-row gap-4 items-center justify-between">
       <h3 className={titleStyles}>{title}</h3>
 
-      <a
-        className={`${primaryButtonStyles} p-2`}
-        href={githubLink}
-        target="_blank"
-      >
-        <FaRegShareFromSquare />
-      </a>
+      <div className="flex flex-row flex-wrap gap-2 justify-end min-w-0">
+        {links.map(({ label, url }) => (
+          <a
+            key={url}
+            className={`${primaryButtonStyles} p-2 flex items-center gap-2`}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${title}: ${label}`}
+            title={`${title}: ${label}`}
+          >
+            <FaRegShareFromSquare className="shrink-0" />
+            {links.length > 1 && (
+              <span className={captionStyles}>{label}</span>
+            )}
+          </a>
+        ))}
+      </div>
     </div>
 
-    {/*Stack Tags Container*/}
+    {/* Stack Tags Container */}
     <div className="flex flex-row flex-wrap gap-2">
       {stack.map((stackItem, index) => (
         <div key={index} className={secondaryCard}>

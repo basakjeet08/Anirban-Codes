@@ -34,7 +34,7 @@ const Form = ({ accessKey }) => {
 
     if (res.success) {
       formRef.current.reset();
-      alert("Mail sent successfully !");
+      alert("Message sent successfully.");
     }
   };
 
@@ -52,7 +52,7 @@ const Form = ({ accessKey }) => {
             className={inputStyle}
             type="text"
             name="subject"
-            placeholder="Enter Subject"
+            placeholder="Subject"
             required
           />
 
@@ -60,7 +60,7 @@ const Form = ({ accessKey }) => {
             className={inputStyle}
             type="email"
             name="email"
-            placeholder="Enter Email"
+            placeholder="Your email address"
             autoComplete="email"
             required
           />
@@ -68,12 +68,12 @@ const Form = ({ accessKey }) => {
           <textarea
             className={`${inputStyle} h-[200px]`}
             name="message"
-            placeholder="Enter your Message"
+            placeholder="Your message"
             required
           />
 
           <button className={`${primaryButtonStyles} p-3 w-2/3`} type="submit">
-            Submit
+            Send message
           </button>
         </form>
       </div>
