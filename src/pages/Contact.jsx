@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
+import PropTypes from "prop-types";
 import {
   bodyStyles,
   primaryCard,
@@ -102,6 +103,10 @@ const Contact = () => {
       <Form accessKey={accessKey} />
     </div>
   );
+};
+
+Form.propTypes = {
+  accessKey: PropTypes.string.isRequired,
 };
 
 export default Contact;

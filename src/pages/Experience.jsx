@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import PropTypes from "prop-types";
 import { experienceData } from "../constants/data";
 import {
   subHeadingStyles,
@@ -82,6 +83,16 @@ const Experience = () => {
       </div>
     </div>
   );
+};
+
+ExperienceItem.propTypes = {
+  experience: PropTypes.shape({
+    company: PropTypes.string.isRequired,
+    timeline: PropTypes.string.isRequired,
+    jobTitle: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Experience;

@@ -1,28 +1,32 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import { FaArrowUp } from "react-icons/fa";
 
 const BackToTop = ({ scrollContainerRef }) => {
-  const [visible, setVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      const y =
+    const handleScroll = () => {
+      const scrollTop =
         scrollContainerRef?.current?.scrollTop ?? window.scrollY ?? 0;
-      setVisible(y > 600);
+      setIsVisible(scrollTop > 600);
     };
-    const c = scrollContainerRef?.current;
-    if (c) c.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
+    const container = scrollContainerRef?.current;
+    if (container) {
+      container.addEventListener("scroll", handleScroll, { passive: true });
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
     return () => {
-      if (c) c.removeEventListener("scroll", onScroll);
-      window.removeEventListener("scroll", onScroll);
+      if (container) container.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [scrollContainerRef]);
 
-  if (!visible) return null;
+  if (!isVisible) return null;
 
-  const scrollTop = () => {
+  const scrollToTop = () => {
     if (scrollContainerRef?.current) {
       scrollContainerRef.current.scrollTo({ top: 0, behavior: "smooth" });
     } else {
@@ -32,13 +36,19 @@ const BackToTop = ({ scrollContainerRef }) => {
 
   return (
     <button
-      onClick={scrollTop}
+      onClick={scrollToTop}
       aria-label="Back to top"
       className="fixed bottom-6 right-6 z-50 h-11 w-11 rounded-full grid place-items-center bg-gradient-to-br from-primary to-accent text-white shadow-glow-lg hover:brightness-110 active:scale-95 transition-all"
     >
       <FaArrowUp />
     </button>
   );
+};
+
+BackToTop.propTypes = {
+  scrollContainerRef: PropTypes.shape({
+    current: PropTypes.object,
+  }).isRequired,
 };
 
 export default BackToTop;

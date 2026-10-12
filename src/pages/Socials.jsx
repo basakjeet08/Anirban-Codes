@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 import { bodyStyles, primaryRowCard, subHeadingStyles } from "../styles";
 import { socialData } from "../constants/data";
 import { motion } from "framer-motion";
@@ -54,6 +54,15 @@ const Socials = () => {
       </div>
     </div>
   );
+};
+
+SocialItems.propTypes = {
+  social: PropTypes.shape({
+    type: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    logo: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Socials;

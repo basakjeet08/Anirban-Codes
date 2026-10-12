@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
+import PropTypes from "prop-types";
 import { TiThMenu } from "react-icons/ti";
 import { IoIosCloseCircleOutline } from "react-icons/io";
-import { headerData } from "../constants/data";
+import { headerData, heroData } from "../constants/data";
 
 const NavItem = ({ item: { id, title }, active, onClick }) => (
   <li>
@@ -21,10 +22,12 @@ const NavItem = ({ item: { id, title }, active, onClick }) => (
 );
 
 const Header = ({ scrollContainerRef }) => {
+  // UI Data for the Header
   const { websiteName, menuItems } = headerData;
+  const { id: homeId, name, role } = heroData;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeId, setActiveId] = useState("#home");
-  const [scrolled, setScrolled] = useState(false);
+  const [activeId, setActiveId] = useState(`#${homeId}`);
+  const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef(null);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
@@ -36,25 +39,29 @@ const Header = ({ scrollContainerRef }) => {
       .filter(({ element }) => element);
 
     const updateActiveSection = () => {
-      const y = container?.scrollTop ?? window.scrollY ?? 0;
-      const height = container?.clientHeight ?? window.innerHeight;
-      const scrollHeight = container?.scrollHeight ?? document.documentElement.scrollHeight;
-      setScrolled(y > 12);
+      const scrollTop = container?.scrollTop ?? window.scrollY ?? 0;
+      const viewportHeight = container?.clientHeight ?? window.innerHeight;
+      const scrollHeight =
+        container?.scrollHeight ?? document.documentElement.scrollHeight;
+      setIsScrolled(scrollTop > 12);
 
       if (!sections.length) return;
 
-      if (y <= 1) {
+      if (scrollTop <= 1) {
         setActiveId(sections[0].id);
         return;
       }
 
-      if (scrollHeight > height && y + height >= scrollHeight - 1) {
+      if (
+        scrollHeight > viewportHeight &&
+        scrollTop + viewportHeight >= scrollHeight - 1
+      ) {
         setActiveId(sections[sections.length - 1].id);
         return;
       }
 
       const viewportTop = container?.getBoundingClientRect().top ?? 0;
-      const activationLine = viewportTop + Math.min(height * 0.25, 160);
+      const activationLine = viewportTop + Math.min(viewportHeight * 0.25, 160);
       let activeSection = sections[0];
       for (const section of sections) {
         if (section.element.getBoundingClientRect().top <= activationLine) {
@@ -98,26 +105,28 @@ const Header = ({ scrollContainerRef }) => {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
+        isScrolled
           ? "bg-ink/80 backdrop-blur-xl border-b border-white/10 shadow-glow"
           : "bg-ink/40 backdrop-blur-md border-b border-transparent"
       }`}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 py-3 flex flex-row gap-4 justify-between items-center">
-        <a href="#home" className="flex items-center gap-2.5 group">
+        {/* Website Name and Role */}
+        <a href={`#${homeId}`} className="flex items-center gap-2.5 group">
           <span className="h-9 w-9 rounded-xl bg-gradient-to-br from-primary via-[#8b5cf6] to-accent grid place-items-center font-display font-bold text-white shadow-glow group-hover:shadow-glow-lg transition-shadow">
-            A
+            {name.charAt(0)}
           </span>
           <span className="flex flex-col leading-none">
             <span className="font-display font-bold text-white tracking-tight">
               {websiteName}
             </span>
             <span className="text-[11px] font-sans text-white/50">
-              Full-Stack Software Engineer
+              {role}
             </span>
           </span>
         </a>
 
+        {/* Mobile Navigation */}
         <nav className="lg:hidden relative" ref={menuRef}>
           <button
             aria-label="Toggle menu"
@@ -134,10 +143,13 @@ const Header = ({ scrollContainerRef }) => {
           </button>
 
           {isMenuOpen && (
-            <ul id="mobile-navigation" className="absolute top-12 right-0 w-56 p-2 z-50 glass rounded-2xl flex flex-col gap-1 shadow-glow-lg bg-ink/95">
-              {menuItems.map((item, index) => (
+            <ul
+              id="mobile-navigation"
+              className="absolute top-12 right-0 w-56 p-2 z-50 glass rounded-2xl flex flex-col gap-1 shadow-glow-lg bg-ink/95"
+            >
+              {menuItems.map((item) => (
                 <NavItem
-                  key={index}
+                  key={item.id}
                   item={item}
                   active={activeId === item.id}
                   onClick={closeMenu}
@@ -147,16 +159,36 @@ const Header = ({ scrollContainerRef }) => {
           )}
         </nav>
 
+        {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-1">
           <ul className="flex flex-row gap-1">
-            {menuItems.map((item, index) => (
-              <NavItem key={index} item={item} active={activeId === item.id} />
+            {menuItems.map((item) => (
+              <NavItem
+                key={item.id}
+                item={item}
+                active={activeId === item.id}
+              />
             ))}
           </ul>
         </nav>
       </div>
     </header>
   );
+};
+
+NavItem.propTypes = {
+  item: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  }).isRequired,
+  active: PropTypes.bool,
+  onClick: PropTypes.func,
+};
+
+Header.propTypes = {
+  scrollContainerRef: PropTypes.shape({
+    current: PropTypes.object,
+  }).isRequired,
 };
 
 export default Header;

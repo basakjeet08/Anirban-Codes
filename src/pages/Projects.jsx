@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import {
   bodyStyles,
   captionStyles,
@@ -86,6 +87,22 @@ const Projects = () => {
       </div>
     </div>
   );
+};
+
+ProjectItem.propTypes = {
+  project: PropTypes.shape({
+    image: PropTypes.string,
+    imageAlt: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    stack: PropTypes.arrayOf(PropTypes.string).isRequired,
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Projects;

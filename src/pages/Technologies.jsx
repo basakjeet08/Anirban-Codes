@@ -1,4 +1,3 @@
-import React from "react";
 import { technologyData } from "../constants/data";
 import { bodyStyles, secondaryCard, subHeadingStyles } from "../styles";
 import { scaleIn } from "../animations/variant";

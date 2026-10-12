@@ -38,6 +38,7 @@ export const headerData = {
 export const heroData = {
   id: "home",
   name: "Anirban Basak",
+  role: "Full-Stack Software Engineer",
   info: `
     I'm a Full-Stack Software Engineer working primarily with Python (Django),
     Java (Spring Boot), and Angular.
@@ -54,6 +55,15 @@ export const heroData = {
     src: myImage,
     alt: "Anirban Basak",
   },
+  stats: [
+    { value: "300K+", label: "Daily matching requests" },
+    { value: "10K+", label: "Kritique downloads" },
+    { value: "900+", label: "Concurrent Matrix users" },
+  ],
+};
+
+export const footerData = {
+  stackSummary: "Full-Stack • Python / Django • Java / Spring Boot • Angular",
 };
 
 export const experienceData = {
@@ -161,11 +171,18 @@ export const projectData = {
   projectList: [
     {
       title: "Harmoniq",
-      stack: ["Spring Boot", "Spring AI", "PostgreSQL", "Angular", "Ollama", "Docker"],
+      stack: [
+        "Spring Boot",
+        "Spring AI",
+        "PostgreSQL",
+        "Angular",
+        "Ollama",
+        "Docker",
+      ],
       links: [
         {
           label: "GitHub",
-          url: "https://github.com/basakjeet08/Harmoniq"
+          url: "https://github.com/basakjeet08/Harmoniq",
         },
       ],
       description: `
@@ -185,7 +202,7 @@ export const projectData = {
       links: [
         {
           label: "GitHub",
-          url: "https://github.com/basakjeet08/AgentHub"
+          url: "https://github.com/basakjeet08/AgentHub",
         },
       ],
       description: `
@@ -238,7 +255,7 @@ export const projectData = {
       links: [
         {
           label: "GitHub",
-          url: "https://github.com/basakjeet08/JetChart"
+          url: "https://github.com/basakjeet08/JetChart",
         },
       ],
       description: `
@@ -269,7 +286,6 @@ export const projectData = {
         Extensive testing and debugging reduced bugs by 66%.
       `,
     },
-
   ],
 };
 
