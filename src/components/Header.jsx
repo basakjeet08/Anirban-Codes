@@ -85,6 +85,8 @@ const Header = ({ scrollContainerRef }) => {
       container.addEventListener("scroll", handleScroll, { passive: true });
     }
     window.addEventListener("scroll", handleScroll, { passive: true });
+    const initialSection = sections.find(({ id }) => id === window.location.hash);
+    initialSection?.element.scrollIntoView();
     handleScroll();
 
     const handleClickOutside = (event) => {

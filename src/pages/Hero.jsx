@@ -1,17 +1,19 @@
 import { motion } from "framer-motion";
-import { FaArrowDown, FaFolderOpen } from "react-icons/fa";
+import { FaArrowDown, FaFileAlt, FaFolderOpen } from "react-icons/fa";
 import {
   bodyStyles,
   mainHeadingStyles,
   primaryButtonStyles,
+  ghostButtonStyles,
   sectionKickerStyles,
 } from "../styles";
-import { heroData, projectData, socialData } from "../constants/data";
+import { heroData, projectData, resumeData, socialData } from "../constants/data";
 import { horizontalSlide } from "../animations/variant";
 
 const Hero = () => {
   // UI Data for the Hero Section
   const { id, name, role, info, stats, profileImage } = heroData;
+  const { url: resumeUrl } = resumeData;
 
   return (
     <section
@@ -58,13 +60,21 @@ const Hero = () => {
 
           <div className="flex flex-wrap gap-3 pt-1">
             <a href={`#${projectData.id}`} className={primaryButtonStyles}>
-              <FaFolderOpen /> View Projects
+              <FaFolderOpen aria-hidden /> View Projects
+            </a>
+            <a
+              href={resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={ghostButtonStyles}
+            >
+              <FaFileAlt aria-hidden /> View Resume
             </a>
             <a
               href={`#${socialData.id}`}
               className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-sans font-semibold text-white/70 hover:text-white transition-colors"
             >
-              Connect <FaArrowDown className="text-xs" />
+              Connect <FaArrowDown aria-hidden className="text-xs" />
             </a>
           </div>
 

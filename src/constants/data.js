@@ -85,6 +85,10 @@ export const footerData = {
   stackSummary: "Full-Stack • Python / Django • Java / Spring Boot • Angular",
 };
 
+export const resumeData = {
+  url: "https://drive.google.com/file/d/1U2pWScbBJAVNXuVEY0J-GNNUUat7cx2y/view?usp=sharing",
+};
+
 export const experienceData = {
   id: "experience",
   kicker: "Career",
