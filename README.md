@@ -29,6 +29,7 @@ The production files are generated in `dist/`. Preview serves that build locally
 
 - Edit `src/constants/data.js` for profile information, experience, technologies, projects, social links, and the resume URL.
 - Project order follows `projectData.projectList`. Use `featured` for badges, `categories` for filters, and `links` for project destinations. Category IDs must match `projectData.filters`.
+- Each project needs a one-sentence `summary` for its card preview. The full `description` is shown when visitors select **Read more**.
 - Technologies and social links use React Icon components through their `icon` fields. Group related technology labels when they share an icon.
 - The hero's **View Resume** button opens `resumeData.url` in a new tab. Update the existing Google Drive file while keeping its public link stable; if the link changes, update this field.
 - Keep the page title, descriptions, sharing metadata, and canonical URL in `index.html` consistent with the portfolio content and deployed URL.

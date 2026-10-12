@@ -41,7 +41,10 @@ import {
 import myImage from "../assets/myImage.jpg";
 
 // Projects Images
-import jetchartCover from "../assets/projects/jetchartCover.jpg";
+import agenthubCover from "../assets/projects/agenthubCover.png";
+import harmoniqCover from "../assets/projects/harmoniqCover.png";
+import jetchartCover from "../assets/projects/jetchartCover.png";
+import kritiqueCover from "../assets/projects/kritiqueCover.png";
 
 export const headerData = {
   websiteName: "Anirban Codes",
@@ -230,7 +233,11 @@ export const projectData = {
   ],
   projectList: [
     {
+      image: harmoniqCover,
+      imageAlt: "Harmoniq community feed, AI chat, and login screens",
       title: "Harmoniq",
+      summary:
+        "A mental health platform with community discussions and an AI chatbot.",
       categories: ["full-stack", "backend", "frontend"],
       featured: true,
       stack: [
@@ -259,7 +266,11 @@ export const projectData = {
     },
 
     {
+      image: agenthubCover,
+      imageAlt: "AgentHub demo workspace, session list, and directory picker",
       title: "AgentHub",
+      summary:
+        "A terminal workspace for managing multiple coding agents and shell sessions.",
       categories: ["tools"],
       featured: true,
       stack: ["Python", "Textual", "TUI", "textual-tty", "bittty"],
@@ -285,7 +296,11 @@ export const projectData = {
     },
 
     {
-      title: "Kritique App",
+      image: kritiqueCover,
+      imageAlt: "Kritique educator list, reviews, and rating form with demo profiles",
+      title: "Kritique",
+      summary:
+        "An Android app for students to review educators and share feedback.",
       categories: ["full-stack", "android", "backend"],
       featured: true,
       status: "Published",
@@ -308,8 +323,10 @@ export const projectData = {
 
     {
       image: jetchartCover,
-      imageAlt: "JetChart charting library cover",
+      imageAlt: "JetChart line, bar, donut, and progress chart previews",
       title: "JetChart",
+      summary:
+        "A Jetpack Compose library for customizable charts in Android apps.",
       categories: ["android"],
       stack: ["Android", "Jetpack Compose", "Data Visualization"],
       links: [
@@ -329,6 +346,8 @@ export const projectData = {
 
     {
       title: "Matrix App",
+      summary:
+        "A treasure hunt app built for a live event with 900+ concurrent users.",
       categories: ["android"],
       stack: ["Android", "Kotlin", "Jetpack Compose"],
       links: [

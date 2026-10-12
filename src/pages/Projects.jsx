@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt, FaStar } from "react-icons/fa";
+import {
+  FaGithub,
+  FaExternalLinkAlt,
+  FaStar,
+  FaChevronDown,
+} from "react-icons/fa";
 import {
   bodyStyles,
   primaryCard,
@@ -13,11 +18,51 @@ import {
 } from "../styles";
 import { projectData } from "../constants/data";
 
+const ProjectDescription = ({ title, summary, description }) => {
+  const descriptionId = useId();
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <div className="flex flex-col gap-2">
+      <p
+        id={descriptionId}
+        className={`${bodyStyles} !text-[13.5px]`}
+      >
+        {isExpanded ? description : summary}
+      </p>
+      <button
+        type="button"
+        className="self-start inline-flex items-center gap-1.5 text-xs font-sans font-semibold text-primary hover:text-onBackground transition-colors"
+        aria-expanded={isExpanded}
+        aria-controls={descriptionId}
+        onClick={() => setIsExpanded((expanded) => !expanded)}
+      >
+        {isExpanded ? "Show less" : "Read more"}
+        <span className="sr-only"> about {title}</span>
+        <FaChevronDown
+          aria-hidden
+          className={`text-[10px] ${isExpanded ? "rotate-180" : ""}`}
+        />
+      </button>
+    </div>
+  );
+};
+
 const ProjectItem = ({
-  project: { image, imageAlt, title, stack, links, description, featured, status },
+  project: {
+    image,
+    imageAlt,
+    title,
+    stack,
+    links,
+    summary,
+    description,
+    featured,
+    status,
+  },
 }) => (
   <article
-    className={`${primaryCard} h-full text-left ${
+    className={`${primaryCard} text-left ${
       featured ? "!border-primary/50 shadow-glow-lg" : ""
     }`}
   >
@@ -79,7 +124,11 @@ const ProjectItem = ({
       )}
     </div>
 
-    <p className={`${bodyStyles} !text-[13.5px]`}>{description}</p>
+    <ProjectDescription
+      title={title}
+      summary={summary}
+      description={description}
+    />
   </article>
 );
 
@@ -139,7 +188,7 @@ const Projects = () => {
       {/* Project Cards */}
       <div
         id={resultsId}
-        className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3"
+        className="grid grid-cols-1 items-start gap-5 md:grid-cols-2 lg:grid-cols-3"
       >
         {filteredProjects.map((project, index) => (
           <motion.div
@@ -161,11 +210,18 @@ const Projects = () => {
   );
 };
 
+ProjectDescription.propTypes = {
+  title: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
+
 ProjectItem.propTypes = {
   project: PropTypes.shape({
     image: PropTypes.string,
     imageAlt: PropTypes.string,
     title: PropTypes.string.isRequired,
+    summary: PropTypes.string.isRequired,
     stack: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     links: PropTypes.arrayOf(
       PropTypes.shape({
