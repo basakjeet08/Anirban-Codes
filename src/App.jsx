@@ -8,14 +8,13 @@ import Hero from "./pages/Hero";
 import Projects from "./pages/Projects";
 import Socials from "./pages/Socials";
 import Technologies from "./pages/Technologies";
-import Contact from "./pages/Contact";
 
 function App() {
   const scrollContainerRef = useRef(null);
 
   return (
     <MotionConfig reducedMotion="user">
-      <div className="h-screen h-dvh w-full bg-ink text-white font-sans relative overflow-hidden">
+      <div className="h-screen h-dvh w-full bg-ink text-white font-sans relative overflow-clip">
         {/* Ambient background */}
         <div aria-hidden className="pointer-events-none fixed inset-0 z-0">
           <div className="absolute inset-0 bg-grid" />
@@ -37,7 +36,6 @@ function App() {
               <Technologies />
               <Projects />
               <Socials />
-              <Contact />
             </div>
             <Footer />
           </main>

@@ -22,21 +22,3 @@ export const horizontalSlide = (direction, delay = 0.2) => {
     },
   };
 };
-
-export const verticalStaggeredAnimation = (index, delayPerIndex = 0.2) => {
-  return {
-    initial: {
-      y: 100,
-      opacity: 0,
-    },
-
-    final: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-        delay: index * delayPerIndex,
-      },
-    },
-  };
-};

@@ -14,7 +14,4 @@ export const primaryCard = `card-lift flex flex-col gap-3 p-5 bg-card/80 backdro
 export const secondaryCard = `px-2.5 py-1 rounded-full bg-white/5 border border-white/10`;
 export const chipText = `text-[11px] font-medium text-onBackground/70 font-sans`;
 
-export const primaryRowCard = `card-lift flex flex-row items-center gap-3 p-3 bg-card/80 backdrop-blur rounded-2xl border border-white/10 shadow-sm hover:shadow-glow hover:border-primary/40 transition-all duration-300`;
-
-// Input Styles
-export const inputStyle = `w-full p-2.5 rounded-xl border border-white/10 outline-none bg-ink/60 text-onBackground placeholder:text-onBackground/35 focus:border-primary focus:ring-2 focus:ring-primary/30 transition font-sans text-sm`;
+export const primaryRowCard = `flex flex-row items-center gap-3 p-3 bg-card/80 backdrop-blur rounded-2xl border border-white/10 shadow-sm group-hover:-translate-y-1 group-hover:shadow-glow group-hover:border-primary/40 transition-[transform,border-color,box-shadow] duration-300`;

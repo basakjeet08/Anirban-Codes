@@ -1,5 +1,13 @@
-// Technology Icons
-import { FaCode, FaDatabase, FaJava } from "react-icons/fa";
+// Icons
+import {
+  FaCode,
+  FaDatabase,
+  FaEnvelope,
+  FaGithub,
+  FaInstagram,
+  FaJava,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import {
   SiAndroid,
   SiAngular,
@@ -14,6 +22,7 @@ import {
   SiJavascript,
   SiJetpackcompose,
   SiKotlin,
+  SiLeetcode,
   SiLinux,
   SiMercurial,
   SiMysql,
@@ -34,13 +43,6 @@ import myImage from "../assets/myImage.jpg";
 // Projects Images
 import jetchartCover from "../assets/projects/jetchartCover.jpg";
 
-// Socials Images
-import githubLogo from "../assets/socials/githubLogo.png";
-import gmailLogo from "../assets/socials/gmailLogo.png";
-import instagramLogo from "../assets/socials/instagramLogo.png";
-import linkedInLogo from "../assets/socials/linkedInLogo.png";
-import leetcodeLogo from "../assets/socials/leetcodeLogo.png";
-
 export const headerData = {
   websiteName: "Anirban Codes",
   menuItems: [
@@ -49,7 +51,6 @@ export const headerData = {
     { id: "#technologies", title: "Stack" },
     { id: "#project", title: "Projects" },
     { id: "#social", title: "Socials" },
-    { id: "#contact", title: "Contact Me" },
   ],
 };
 
@@ -347,6 +348,7 @@ export const projectData = {
 
 export const socialData = {
   id: "social",
+  kicker: "Connect",
   sectionHeading: "Socials",
   content: `
       Explore my projects on GitHub, connect with me on LinkedIn, or find my coding profile on LeetCode.
@@ -357,41 +359,31 @@ export const socialData = {
       type: "LinkedIn",
       name: "Anirban Basak",
       url: "https://www.linkedin.com/in/anirban-basak-b96055249/",
-      logo: linkedInLogo,
+      icon: FaLinkedinIn,
     },
     {
       type: "GitHub",
       name: "Basakjeet08",
       url: "https://github.com/basakjeet08",
-      logo: githubLogo,
+      icon: FaGithub,
     },
     {
       type: "LeetCode",
       name: "anirban_0_0",
       url: "https://leetcode.com/u/anirban_0_0/",
-      logo: leetcodeLogo,
+      icon: SiLeetcode,
     },
     {
       type: "Instagram",
       name: "anirban_0_0",
       url: "https://www.instagram.com/anirban_0_0",
-      logo: instagramLogo,
+      icon: FaInstagram,
     },
     {
       type: "Email",
       name: "jeetbasak2002@gmail.com",
       url: "mailto:jeetbasak2002@gmail.com",
-      logo: gmailLogo,
+      icon: FaEnvelope,
     },
   ],
-};
-
-export const contactData = {
-  id: "contact",
-  sectionHeading: "Contact Me",
-  content: `
-    Have a project in mind or want to discuss a software engineering opportunity?
-    Send me a message about your project, team, or collaboration.
-  `,
-  accessKey: "991b4a14-5d79-4a8b-9b38-d0e5da179175",
 };

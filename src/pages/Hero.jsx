@@ -6,7 +6,7 @@ import {
   primaryButtonStyles,
   sectionKickerStyles,
 } from "../styles";
-import { contactData, heroData, projectData } from "../constants/data";
+import { heroData, projectData, socialData } from "../constants/data";
 import { horizontalSlide } from "../animations/variant";
 
 const Hero = () => {
@@ -61,10 +61,10 @@ const Hero = () => {
               <FaFolderOpen /> View Projects
             </a>
             <a
-              href={`#${contactData.id}`}
+              href={`#${socialData.id}`}
               className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-sans font-semibold text-white/70 hover:text-white transition-colors"
             >
-              Contact <FaArrowDown className="text-xs" />
+              Connect <FaArrowDown className="text-xs" />
             </a>
           </div>
 
