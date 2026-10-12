@@ -68,58 +68,58 @@ export const footerData = {
 
 export const experienceData = {
   id: "experience",
+  kicker: "Career",
   sectionHeading: "Experience",
+  blurb: "Building scalable backend systems, delivering Android applications, and leading development teams.",
   expList: [
     {
+      id: "instahyre",
       company: "InstaHyre",
       timeline: "June 2025 - Present",
       jobTitle: "Software Engineer (SDE I)",
       location: "Noida, India",
-      description: `
-        At InstaHyre, I own development of core candidate-facing pages and workflows.
-
-        I helped build and optimize an Elasticsearch-based candidate-job matching engine
-        serving 300K+ requests daily.
-
-        I reduced API latency by up to 65% across 10+ endpoints by optimizing queries,
-        eliminating N+1 queries, and implementing Redis caching.
-
-        I also built a Zoho Contacts integration syncing 60K+ recruiter records daily for CRM workflows,
-        and contributed to the platform's design system and reusable MJML email system.
-      `,
+      tags: ["Python", "Django", "Java", "Spring Boot", "Elasticsearch", "Redis"],
+      description:
+        "At InstaHyre, I own development of core candidate-facing pages and workflows.",
+      highlights: [
+        "Built and optimized an Elasticsearch-based candidate-job matching engine serving 300K+ requests daily.",
+        "Reduced API latency by up to 65% across 10+ endpoints by optimizing queries, eliminating N+1 queries, and implementing Redis caching.",
+        "Built a Zoho Contacts integration syncing 60K+ recruiter records daily for CRM workflows.",
+        "Contributed to the platform's design system and reusable MJML email system.",
+      ],
     },
 
     {
+      id: "mbits",
       company: "MBITS Innovation Private Limited",
       timeline: "May 2023 - December 2023",
-      jobTitle: "Android Developer Intern",
+      jobTitle: "Android Developer",
       location: "Bengaluru, India (Remote)",
-      description: `
-        At MBITS, I worked on Android applications focused on health tracking
-        and media features.
-
-        I built a charting library with 15+ reusable components used across
-        90% of health-tracking screens.
-
-        I migrated a Spotify module to Jetpack Compose, reducing its codebase
-        size by 50%.
-
-        I also simplified backend integration by consolidating 24 API endpoints into 4.
-      `,
+      tags: ["Android", "Kotlin", "Jetpack Compose", "Charts"],
+      description:
+        "At MBITS, I worked on Android applications focused on health tracking and media features.",
+      highlights: [
+        "Built a health-tracking screen that brings together health metrics, graphs, and data visualizations to help users monitor their health.",
+        "Built a charting library with 15+ reusable components used across 90% of health-tracking screens.",
+        "Migrated a Spotify module to Jetpack Compose, reducing its codebase size by 50%.",
+        "Simplified backend integration by consolidating 24 API endpoints into 4.",
+      ],
     },
 
     {
+      id: "iot-lab-kiit",
       company: "IoT Lab, KIIT",
       timeline: "Sep 2022 - Aug 2024",
       jobTitle: "Android Lead",
       location: "KIIT, Bhubaneswar",
-      description: `
-        At IoT Lab, I started as an Android Developer and was promoted to Android
-        Lead within a year, leading a team of 10+ developers.
-
-        I worked on Android and IoT-based projects while mentoring developers,
-        coordinating project delivery, and helping organize technical events.
-      `,
+      tags: ["Backend", "Android", "IoT", "Leadership", "Mentoring"],
+      description:
+        "At IoT Lab, I started as an Android Developer and was promoted to Android Lead within a year, leading a team of 10+ developers.",
+      highlights: [
+        "Worked on Android and IoT-based projects.",
+        "Mentored developers and coordinated project delivery.",
+        "Helped organize technical events.",
+      ],
     },
   ],
 };
